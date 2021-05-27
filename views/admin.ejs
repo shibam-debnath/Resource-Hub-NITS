@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Admin Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/admin_util.css">
+  <link rel="stylesheet" type="text/css" href="/css/admin_main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <style>
+  .search-sort-box {
+        margin: 3vh;
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sort-text {
+        margin-left: 12px;
+        font-weight: bold;
+        font-size: 1rem;
+    }
+
+    .search-sort-box>button {
+        margin-left: 3px;
+    }
+
+    .search-box>select {
+        font-size: 1rem;
+        border-radius: 20px;
+        outline: none;
+        padding: 3px;
+        width:100px;
+        padding:5px 10px;
+        border:1px solid black;
+        margin-left:8px;
+    }
+    .search-box{
+        display: flex;
+        justify-content: center;
+        margin:30px 0;
+        align-items: end;
+        height:10vh;
+    }
+    .search-box>label{
+        font-size: 1rem;
+        /*font-weight: bold;*/
+        /*margin-left:20px;*/
+    }
+    .search-box>input{
+        width:100px;
+        margin-left:8px;
+        border-radius: 30px;
+        outline:none;
+        border:1px solid black;
+        padding:5px 10px;
+        /* margin:15px 20px 15px; */
+        font-size:15px;
+    }
+    @media screen and (max-width: 768px){
+      .search-box{
+        margin-top:15vh;
+      }
+    }
+    .header div{
+      font-size:1rem !important;
+      padding-left: 5px;
+      padding-right: 4px;
+    }
+  </style>
+</head>
+<body style="overflow-x: hidden;">
+  
+  <div class="limiter" >
+  <div class="container" id="container" style="max-width:100vw">
+            <div id="loggedin" style="display:flex;height:10vh;justify-content:center;align-items:center">
+              <div>
+                <span>Logged in as: </span>
+                  <span id="name"><b><%= name %></b></span>
+              </div>
+            </div>
+            <div id="options" style="display:flex;height:10vh;justify-content:center;align-items:end">
+                <select name="forma" onchange="location = this.value;" id="selectoption">
+                    <option value="/hub/admin/21?model=User" hidden>Users</option>
+                    <option value="/hub/admin/21?model=User">Users</option>
+                    <option value="/hub/admin/21?model=Notes">Notes</option>
+                    <option value="/hub/admin/21?model=Report">Report</option>
+                    <option value="/hub/admin/21?model=DeleteNote">Delete Notes</option>
+                    <option value="/hub/admin/21?model=RequestNotes">Request Notes</option>
+                </select>
+                   <h1 style="font-size:1.4rem;margin-left:3rem;">Model - <span style="color: blueviolet;" id="data"><%=data%></span><span style="color: #dacc13ea;">Size - <%=dataDetails.length%></span></h1>
+            </div>
+    </div>
+    <div class="container" id="container" style="max-width:100vw">
+      <div class="search-box">
+      <% if(data==undefined||data=='User' || data=='Report'){ %>
+            <label class="col-sm-12 col-md-1">Search By Name</label>
+            <input style="border:1px solid black !important;" id="nameInput"onkeyup=searchByName() class="col-sm-12 col-md-1"></input>
+      <% }%>
+       <% if(data != 'Report'){ %>
+            <span class="sort-text" class="col-sm-12 col-md-1">Search By Branch</span>
+            <select onChange=sortByBranch() id="mySelect" class="col-sm-12 col-md-1">
+                <option value="CSE">Computer</option>
+                <option value="ECE">Electronics</option>
+                <option value="EE">Electrical</option>
+                <option value="CE">Civil</option>
+                <option value="ME" >Mechanical</option>
+                <option value="EIE">Instrumentation</option>
+            </select>
+            <span class="sort-text" class="col-sm-12 col-md-1">Search By Semester</span>
+            <select onChange=sortBySemester() id="mySemester" class="col-sm-12 col-md-1">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5" >5</option>
+                <option value="6">6</option>
+                <option value="7" >7</option>
+                <option value="8">8</option>
+            </select>
+            <% }%>
+    <!--     </div>
+        <div> -->
+            <% if(data==undefined||data=='Notes' || data=='RequestNotes'){ %>
+            <label class="col-sm-12 col-md-1">Search By Professor</label>
+            <input style="border:1px solid black !important;" id="profInput"onkeyup=searchByProf() class="col-sm-12 col-md-1"></input>
+            <% }%>
+            <% if(data!='User'){ %>
+            <label class="col-sm-12 col-md-1">Search By Subject</label>
+            <input style="border:1px solid black !important;" id="subjectName" onkeyup=searchBySubject() class="col-sm-12 col-md-1"></input>
+      <% }%>
+        </div>
+    <!-- <div class="search-box row">
+      <% if(data==undefined||data=='User' || data=='Report'){ %>
+            <label class="col-sm-12 col-md-1">Search By Name</label>
+            <input id="nameInput"onkeyup=searchByName() class="col-sm-12 col-md-2"></input>
+      <% }%>
+       <% if(data != 'Report'){ %>
+            <span class="sort-text" class="col-sm-12 col-md-1">Search By Branch</span>
+            <select onChange=sortByBranch() id="mySelect" class="col-sm-12 col-md-2">
+                <option value="Computer">Computer</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Electrical">Electrical</option>
+                <option value="Civil">Civil</option>
+                <option value="Mechanical" >Mechanical</option>
+                <option value="Instrumentation">Instrumentation</option>
+            </select>
+            <span class="sort-text" class="col-sm-12 col-md-1">Search By Semester</span>
+            <select onChange=sortBySemester() id="mySemester" class="col-sm-12 col-md-1">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5" >5</option>
+                <option value="6">6</option>
+                <option value="7" >7</option>
+                <option value="8">8</option>
+            </select>
+            <% }%>
+            <% if(data==undefined||data=='Notes' || data=='RequestNotes'){ %>
+            <label class="col-sm-12 col-md-1">Search By Professor</label>
+            <input id="profInput"onkeyup=searchByProf() class="col-sm-12 col-md-2"></input>
+            <% }%>
+            <% if(data!='User'){ %>
+            <label class="col-sm-12 col-md-1">Search By Subject</label>
+            <input id="subjectName" onkeyup=searchBySubject() class="col-sm-12 col-md-2"></input>
+      <% }%>
+        </div> -->
+    </div>
+    
+    <div class="container-table100">
+      <div class="wrap-table100">
+          <div class="table" id="1">
+            <% if(data==undefined||data=='User'){ %>
+            <div class="row header">
+              <div class="cell">
+                Sl No.
+              </div>
+              <div class="cell" style="width:0vw;display:none;">
+                User ID
+              </div>
+              <div class="cell">
+                Name
+              </div>
+              <div class="cell">
+                Branch
+              </div>
+              <div class="cell">
+                Semester
+              </div>
+              <div class="cell">
+                Email ID
+              </div>
+              <div class="cell">
+                Contact No.
+              </div>
+              <div class="cell">
+                Verified
+              </div>
+              <div class="cell">
+                Blocked
+              </div>
+              <div class="cell">
+                Uploads
+              </div>
+              <div class="cell">
+                Downloads
+              </div>
+              <div class="cell">
+                Other Downloads
+              </div>
+              <div class="cell">
+                Reports
+              </div>
+              <div class='cell'>Mail</div>
+              <div class="cell">Delete</div>
+
+            </div>
+            <% var count = 1 %>
+                  <% dataDetails.forEach((data) => { %>
+            <div class="row rows">
+              <div class="cell">
+                <%= count%>
+              </div>
+              <div class="cell" style="width:0vw;display:none;">
+                <%= data._id %>
+              </div>
+              <div class="cell">
+                <%= data.name %>
+              </div>
+              <div class="cell">
+                <%= data.branch %>
+              </div>
+              <div class="cell">
+                <%= data.semester %>
+              </div>
+              <div class="cell">
+                <%= data.email %>
+              </div>
+              <div class="cell">
+                <%= data.phnNo %>
+              </div>
+              <div class="cell">
+                <%= data.verified %>
+              </div>
+              <div class="cell">
+                <%= data.blocked %>
+              </div>
+              <div class="cell">
+                <%= data.uploadsCount %>
+              </div>
+              <div class="cell">
+                <%= data.downloadCountUser %>
+              </div>
+              <div class="cell">
+                <%= data.notesDownloadedByUsers %>
+              </div>
+              <div class="cell">
+                <%= data.reports %>
+              </div>
+              <div class="cell">
+                <a href="/hub/admin/21/mail/<%= data._id %>" class="btn btn-float">
+                  <i class="fa fa-envelope"></i>
+                </a>
+              </div>
+              <div class="cell">
+                <a href="/hub/admin/21/delete/<%= data._id %>" class="btn btn-float">
+                  <i class="fa fa-trash"></i>
+                </a>
+              </div>
+            </div>
+              <% count = count+1 %>
+                  <% })%>
+                         <%}%>
+          </div>
+                  <div class="table" id="2">
+                   <% if(data=='Notes'){ %>
+                   <div class="row header">
+              <div class="cell">
+                Sl No.
+              </div>
+              <div class="cell">
+                Note ID
+              </div>
+              <div class="cell">
+                Year
+              </div>
+              <div class="cell">
+                Branch
+              </div>
+              <div class="cell">
+                Semester
+              </div>
+              <div class="cell">
+                Subject
+              </div>
+              <div class="cell">
+                Notes Location
+              </div>
+              <div class="cell">
+                Prof Name
+              </div>
+              <div class="cell">
+                Note Type
+              </div>
+              <div class="cell">
+                Uploaded By
+              </div>
+              <div class="cell">
+                Download Count
+              </div>
+              <div class="cell">
+                Reports
+              </div>
+            </div>
+            <% var count = 1 %>
+              <% dataDetails.forEach((data) => { %>
+              <div class="row rows">
+              <div class="cell" data-title="Full Name">
+                <%= count%>
+              </div>
+              <div class="cell" data-title="Age">
+                <%= data._id %>
+              </div>
+              <div class="cell" data-title="Job Title">
+                <%= data.name %>
+              </div>
+              <div class="cell" data-title="Location">
+                <%= data.branch %>
+              </div>
+              <div class="cell" data-title="Age">
+                <%= data.semester %>
+              </div>
+              <div class="cell" data-title="Age">
+                <%= data.email %>
+              </div>
+              <div class="cell" data-title="Age">
+                <%= data.phnNo %>
+              </div>
+              <div class="cell" data-title="Age">
+                <%= data.verified %>
+              </div>
+              <div class="cell" data-title="Age">
+                <%= data.uploadsCount %>
+              </div>
+              <div class="cell" data-title="Age">
+                <%= data.downloadCountUser %>
+              </div>
+              <div class="cell" data-title="Age">
+                <%= data.notesDownloadedByUsers %>
+              </div>
+              <div class="cell" data-title="Age">
+                <%= data.reports %>
+              </div>
+            </div>
+              <% count = count+1 %>
+                  <% })%>
+                         <%}%>
+                  </div>
+                         <div class="table" id="3">
+          <% if(data=='Report'){ %>
+            <div class="row header">
+              <div class="cell">
+                Sl No.
+              </div>
+              <div class="cell">
+                User ID
+              </div>
+              <div class="cell">
+                Name
+              </div>
+              <div class="cell">
+                Email ID
+              </div>
+              <div class="cell">
+                Message
+              </div>
+              <div class="cell">
+                Subject
+              </div>
+              <div class="cell">
+                Image Location
+              </div>
+              <div class="cell">
+                Downloads
+              </div>
+            </div>
+            <% var count = 1 %>
+                  <% dataDetails.forEach((data) => { %>
+            <div class="row rows">
+              <div class="cell" data-title="Full Name">
+                <%= count%>
+              </div>
+              <div class="cell" data-title="Age">
+                <%= data._id %>
+              </div>
+              <div class="cell" data-title="Job Title">
+                <%= data.name %>
+              </div>
+              <div class="cell" data-title="Location">
+                <%= data.email %>
+              </div>
+              <div class="cell" data-title="Age">
+                <%= data.message %>
+              </div>
+              <div class="cell" data-title="Age">
+                <%= data.subject %>
+              </div>
+              <div class="cell" data-title="Age">
+                <%= data.issueImageLoc %>
+              </div>
+            </div>
+              <% count = count+1 %>
+                  <% })%>
+                         <%}%>
+                  </div>
+                   <div class="table" id="4">
+          <% if(data=='RequestNotes'){ %>
+            <div class="row header">
+              <div class="cell">
+                Sl No.
+              </div>
+              <div class="cell">
+                Note ID
+              </div>
+              <div class="cell">
+                Solved
+              </div>
+              <div class="cell">
+                Branch
+              </div>
+              <div class="cell">
+                Semester
+              </div>
+              <div class="cell">
+                Subject
+              </div>
+              <div class="cell">
+                Note Type
+              </div>
+              <div class="cell">
+                Prof Name
+              </div>
+              <div class="cell">
+                Year
+              </div>
+            </div>
+            <% var count = 1 %>
+                  <% dataDetails.forEach((data) => { %>
+            <div class="row rows">
+              <div class="cell">
+                <%= count%>
+              </div>
+              <div class="cell">
+                <%= data._id %>
+              </div>
+              <div class="cell">
+                <%= data.solved %>
+              </div>
+              <div class="cell">
+                <%= data.branch %>
+              </div>
+              <div class="cell">
+                <%= data.semester %>
+              </div>
+              <div class="cell">
+                <%= data.subject %>
+              </div>
+              <div class="cell">
+                <%= data.noteType %>
+              </div>
+              <div class="cell">
+                <%= data.profName %>
+              </div>
+              <div class="cell">
+                <%= data.year %>
+              </div>
+            </div>
+              <% count = count+1 %>
+                  <% })%>
+                   <%}%>
+                      </div>
+          <div class="table" id="5">
+          <% if(data=='DeleteNote'){ %>
+            <div class="row header">
+              <div class="cell">
+                Sl No.
+              </div>
+              <div class="cell">
+                Note ID
+              </div>
+              <div class="cell">
+                Deleted Via
+              </div>
+              <div class="cell">
+                Branch
+              </div>
+              <div class="cell">
+                Semester 
+              </div>
+              <div class="cell">
+                Subject
+              </div>
+              <div class="cell">
+                User Name
+              </div>
+              <div class="cell">
+                User Email
+              </div>
+              
+            </div>
+            <% var count = 1 %>
+                  <% dataDetails.forEach((data) => { %>
+            <div class="row rows">
+              <div class="cell">
+                <%= count%>
+              </div>
+              <div class="cell">
+                <%= data._id %>
+              </div>
+              <div class="cell">
+                <%= data.via %>
+              </div>
+              <div class="cell">
+                <%= data.branch %>
+              </div>
+              <div class="cell">
+                <%= data.semester %>
+              </div>
+              <div class="cell">
+                <%= data.subject %>
+              </div>
+              <div class="cell">
+                <%= data.userName %>
+              </div>
+              <div class="cell">
+                <%= data.userEmailId %>
+              </div>
+              
+            </div>
+              <% count = count+1 %>
+                  <% })%>
+                  <%}%>   
+                </div>
+          </div>
+      </div>
+    </div>
+  </div>
+<script>
+  function getTheTable(){
+      let tableNo;
+    var selectClass = document.getElementById('data');
+    switch(selectClass.textContent.toLowerCase()){
+      case 'user': tableNo = document.getElementById("1");break;
+      case 'notes': tableNo = document.getElementById("2");break;
+      case 'report': tableNo = document.getElementById("3");break;
+      case 'requestnotes': tableNo = document.getElementById("4");break;
+      case 'deletenote': tableNo = document.getElementById("5");break;
+      default: tableNo = document.getElementById("1");break;
+    }
+    return tableNo;
+  }
+</script>
+<script>
+  function searchByName(){
+    let input, filter,tr, td, i, txtValue,tableNo;
+    console.log("hey")
+  input = document.getElementById("nameInput");
+  filter = input.value.toUpperCase();
+  tableNo = getTheTable();
+  tr = tableNo.getElementsByClassName("rows");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByClassName("cell")[2];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>
+<script>
+  function searchByProf(){
+    let input, filter, tableNo, tr, td, i, txtValue;
+    console.log("hey")
+  input = document.getElementById("profInput");
+  filter = input.value.toUpperCase();
+  tableNo = getTheTable();
+  tr = tableNo.getElementsByClassName("rows");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByClassName("cell")[7];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>
+<script>
+    function searchBySubject(){
+    let input, filter, tableNo, tr, td, i, txtValue;
+    console.log("hey")
+  input = document.getElementById("subjectName");
+  filter = input.value.toUpperCase();
+  tableNo = getTheTable();
+  tr = tableNo.getElementsByClassName("rows");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByClassName("cell")[5];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+  </script>
+<script>
+  function sortByBranch() {
+  // Declare variables
+  let select, filter, tableNo, tr, td, i, txtValue;
+  select = document.getElementById("mySelect");
+  filter = select.value.toUpperCase();
+  tableNo =getTheTable();
+  tr = tableNo.getElementsByClassName("rows");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByClassName("cell")[3];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      console.log("txtValue",txtValue.toUpperCase());
+      console.log("filter",filter);
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+
+  </script>
+  <script>
+    function sortBySemester() {
+  // Declare variables
+  let select, filter, tableNo, tr, td, i, txtValue;
+  select = document.getElementById("mySemester");
+  filter = select.value.toString();
+  tableNo = getTheTable();
+  tr = tableNo.getElementsByClassName("rows");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByClassName("cell")[4];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      console.log("txtValue",txtValue.toUpperCase());
+      console.log("filter",filter);
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+
+  </script>
+     <script src="/js/jquery-1.12.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/admin_main.js"></script>
+
+</body>
+</html>

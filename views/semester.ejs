@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Semester</title>
+        <link rel="icon" href="/img/favicon.png">
+        <link rel="stylesheet" href="/css/bookcard.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<style>
+.developers-details{
+    font-size:1rem;
+    position:relative;
+    top:1vh;
+    color:black !important;
+}
+      .logout1{
+    color:white !important;
+}
+@media (max-width:768px){
+	.grid-item:first-child{
+		margin-top:16vh;
+	}
+}
+@media (min-width: 767px){
+.logout1{
+    color:black;
+    position:relative;
+    left:10vw;
+    font-weight:700;
+}
+}
+    .active { color: red; }
+    #preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #222;
+    z-index: 999999;
+}
+#loader {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #9370DB;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+#loader:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #BA55D3;
+    -webkit-animation: spin 3s linear infinite;
+    animation: spin 3s linear infinite;
+}
+#loader:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #FF00FF;
+    -webkit-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite;
+}
+@-webkit-keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+</style>
+    </head>
+    <body style="overflow-x: hidden;background:#f7edd5;">
+        <div id="preloader">
+        <div id="loader"></div>
+    </div>
+        <%= console.log("notes in ejs",notes) %>
+        <%= console.log("branch details",branchname) %>
+
+                <nav class="navbar">
+            <!-- <label class="navbar-toggle" id="js-navbar-toggle" for="chkToggle">
+                    <img src="img/bars.png" alt="" style="position: absolute;top: 20px;">
+                </label> -->
+            <a href="/" class="logo">Resource Hub</a>
+            <!-- <input type="checkbox" id="chkToggle"></input> -->
+            <ul class="main-nav" id="js-menu">
+              <li>
+                <a href="/" class="nav-links">Home</a>
+              </li>
+              <li>
+                <a href="/#about" class="nav-links">About</a>
+              </li>
+              <li>
+                <a href="/profile" class="nav-links">Profile</a>
+              </li>
+              <li>
+                <a href="/users/branch" class="nav-links active">Hub</a>
+              </li>
+              <li>
+                <a href="/#contact" class="nav-links">Contact Us</a>
+              </li>
+              <li>
+                <a href="/users/logout" class="nav-links logout1">Logout</a>
+              </li>
+            </ul>
+            <div id="navtoggle"> <i class="fas fa-bars"></i> </div> 
+          </nav>
+
+          <div id="smallnavbar">
+            <ul class="smallmain-nav" id="smalljs-menu">
+                <li>
+                  <a href="/" class="nav-links smallnav">Home</a>
+                </li>
+                <li>
+                  <a href="/#about" class="nav-links smallnav">About</a>
+                </li>
+                <li>
+                    <a href="/profile" class="nav-links smallnav">Profile</a>
+                  </li>
+                <li>
+                  <a href="/users/branch" class="nav-links smallnav active">Hub</a>
+                </li>
+                <li>
+                  <a href="/#contact" class="nav-links smallnav">Contact Us</a>
+                </li>
+                <li>
+                    <a href="/users/logout" class="nav-links smallnav">Logout</a>
+                  </li>
+              </ul>
+        </div>
+        <% var count = 1 %>
+        <div class="grid-container">
+            <% notes.forEach((note) => { %>
+            
+                <div class="container1 grid-item">
+                    
+                    <div class="content">No. of Uploads : <%= note==0 ? 0 : note.length %></div>
+                    <div class="content">No. of Downloads : <%=downloadCount[count-1]%></div>
+                    <div class="content">Overall Rating : <%= ratingsPerSemFloored[count-1] %></div>
+                    <div class="notes content"style="position:relative;top:54px"><a href="/users/branch/semester/notes?branch=<%= branchname %>&semester=<%=count %>&Notescount=<%= note==0 ? 0 : note.length %>">View Notes</a></div>
+                    <div class="notes content" style="position:relative;top:45px"><a href="/users/branch/semester/question?branch=<%= branchname %>&semester=<%=count %>&Notescount=<%= note==0 ? 0 : note.length %>">View Ques Paper</a></div>
+                    <div class="cover">
+                        <figure class="front">
+                            <div class="heading1">SEMESTER</div>
+                            <div class="heading1 sem"><%= count%></div>
+                        </figure>
+                        <figure class="back"></figure>
+                    </div>
+                </div>
+                <% count = count+1 %>
+            <% }); %>
+        </div>
+        
+
+         <!--::footer_part start::-->
+   <footer class="footer_part">
+        <div class="grid-footer">
+            <!-- <div class="row"> -->
+                <div class="col-sm-4 col-md-4 col-lg-3">
+                    <div class="single_footer_part">
+                        <h4>Developers</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="/developers">Ankit Srivastava</a></li>
+                            <li><a href="/developers">Ujjawal Jain</a></li>
+                            <li><a href="/developers">Anuva Bhattacharjee</a></li>
+                            <li><a href="/developers" class="developers-details">Know More About Developers</a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-2">
+                    <div class="single_footer_part">
+                        <h4>Popular Notes</h4>
+                        <ul class="list-unstyled">
+                            <% popularNotes.forEach((note) => { %>
+                                <li style="overflow:hidden; max-height: 30px;"><a href="/users/branch/semester/notes?branch=<%= note.branch %>&semester=<%= note.semester %>"><%= note.subject %>,<%= note.semester %>,<%= note.branch %></a></li>
+                            <% }); %>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-2">
+                    <div class="single_footer_part">
+                        <h4>Recent Uploads</h4>
+                        <ul class="list-unstyled">
+                            <% recentNotes.forEach((note) => { %>
+                                <li style="overflow:hidden; max-height: 30px;"><a href="/users/branch/semester/notes?branch=<%= note.branch %>&semester=<%= note.semester %>"><%= note.subject %>,<%= note.semester %>,<%= note.branch %></a></li>
+                                <% }); %>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-2">
+                    <div class="single_footer_part">
+                        <h4>Most Downloaded</h4>
+                        <ul class="list-unstyled">
+                            <% mostDownloaded.forEach((note) => { %> 
+                                <li style="overflow:hidden; max-height: 30px;"><a href="/users/branch/semester/notes?branch=<%= note.branch %>&semester=<%= note.semester %>"><%= note.subject %> <%= note.semester %> <%= note.branch %></a></li>
+                            <% }); %>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-3 col-lg-3">
+                    <div class="single_footer_part">
+                        <h4>Popular Profiles</h4>
+                        <ul class="list-unstyled">
+                            <% popularProfile.forEach((profile) => { %>
+                                <li><a href="/users/publicProfile/<%= profile._id %>"><%= profile.name %></a></li>
+                            <% }); %>
+                        </ul>
+                    </div>
+                </div>
+            <!-- </div> -->
+            <hr>
+        </div>
+    </footer>
+    <!--::footer_part end::-->
+        <script type="text/javascript" src="/js/branch-cards2.js"></script>
+
+        <script> 
+        window.onload = function(){
+            document.querySelector("#preloader").style.display = "none";
+        }
+    </script>
+    </body>
+</html>

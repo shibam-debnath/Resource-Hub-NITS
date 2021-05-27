@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Resource Hub</title>
+    <link rel="icon" href="/img/favicon.png">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/all.css">
+      <link rel="stylesheet" href="https://demo.voidcoders.com/htmldemo/fitgear/main-files/assets/css/animate.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/css/flaticon.css">
+    <link rel="stylesheet" href="/css/themify-icons.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/index2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+	$(document).ready(openModal());
+    setTimeout(openModal,500);
+    function openModal(){
+        $("#myModal").modal({
+            show:true,
+            focus:true,
+            keyboard:true
+        });
+    }
+</script>
+    <style>
+    	form {
+	background-color: #FFFFFF;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 50px;
+	height: 100%;
+	text-align: center;
+}
+.developers-details{
+    font-size:1rem;
+    position:relative;
+    top:1vh;
+    color:black !important;
+}
+input {
+	background-color: #eee;
+	border: none;
+	padding: 12px 15px;
+	margin: 8px 0;
+	width: 100%;
+}
+.logo-text{
+    font-size: 2rem;
+    color: white !important;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.footer_part{font-size: 1.3rem;}
+.main_menu .main-menu-item ul li .nav-link {
+    font-size: 1.1rem;
+   }
+   .button{
+    font-size: 1.1rem;
+    font-weight: 600;
+   }
+  .btn_2{
+    font-size:1.1rem;
+  }
+  @media (min-width: 767px) {
+  p{
+    font-size: 1.1rem;
+    color: #464646;
+  }
+  .mobile-view,.mobile-view1{
+    display:none;
+}
+
+}
+ @media (max-width: 767px){
+     .menu_fixed .main_logo{
+        position: relative;
+    left: 0vw;
+    top:-1.5vh;;
+}
+.main_menu{
+    background:#562FC7 !important;
+}
+.mobile-view,.mobile-view1{
+    display:inline-block;
+}
+.profileicon{
+        position: relative;
+    left: -10vw;
+    top: -3vh;
+}
+.menu_icon:after{
+    color:white !important;
+ } 
+}
+
+.active { color: red; }
+.logout{
+    background: transparent;
+    color: black !important;
+}
+@media (min-width: 767px){
+.logout{
+    background-color: #ff4800;
+    color: white !important;
+    position:relative;
+    font-size:1.3rem !important;
+    font-weight:700;
+    float: right;
+    left: 85vw;
+    position: fixed;
+    padding: 10px 35px;
+    margin-top: 20px;
+}
+.profile-img{display:none;}
+}
+@media (max-width: 991px){
+.navbar-collapse {
+    z-index: 9999 !important;
+    position: absolute;
+    left: 0;
+    top: 55px;;
+}
+}
+.search-view{
+	width: 17vw;
+    top: 10vh;
+    left: 0vw;
+    position:absolute;
+    /*display: none;*/
+    border-radius:0;
+    background:white;
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.2), 0 20px 25px 0 rgba(0, 0, 0, 0.2); 
+    max-height: 50vh;
+    overflow-y: scroll;
+}
+.search-view li{
+	padding: 10px;
+    width: 100%;
+    display: none;
+    font-weight:600;
+}
+.search-view li a{
+	color:black !important;
+	font-size:1.2rem;
+	padding:2vh 2vw;
+}
+.mobile-view,.mobile-view1{
+	display:none;
+}
+@media (max-width: 360px){
+	.search-view{top:9vh;}
+}
+@media (max-width: 767px){
+	.mobile-view{
+	display: block;
+    position: relative;
+    top: -1.5vh;
+    left: -20vw;
+    width: 50vw;
+	}
+    .mobile-view1{
+        display: block;
+    position: relative;
+    top: -1.5vh;
+    left: 20vw;
+    width: 50vw;
+    }
+    .mobile-search{display:none;}
+	.search-view{
+	width: 50vw;
+    top: 7vh;
+    left: 0vw;
+    /*display: none;*/
+    border-radius:0;
+	}
+	.mobile-view label,.mobile-view1 label{
+    position: absolute;
+    left: 14px;
+    top: 2.5vh;
+}
+
+    .profile-img img{
+    width: 11vw;
+    height: 6vh;
+    position: relative;
+    top: -1.3vh;
+    left: 2vw;
+    border-radius: 50%;
+    }
+}	
+.mobile-view:focus label,.mobile-view1:focus label{
+	display:none;
+}
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #222;
+    z-index: 999999;
+}
+#loader {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #9370DB;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+#loader:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #BA55D3;
+    -webkit-animation: spin 3s linear infinite;
+    animation: spin 3s linear infinite;
+}
+#loader:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #FF00FF;
+    -webkit-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite;
+}
+@-webkit-keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <div id="preloader">
+        <div id="loader"></div>
+    </div>
+
+	<!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="exampleModalScrollableTitle">Important Updates</h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" style="font-size: 6vh;position: relative;top: -2vh;">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="card">
+            <div class="collapse" style="display:block;">
+                <div class="card-body">
+                <ul style="list-style-type:disc;font-size:1.2rem;margin-left:2vw;">
+                <li>Progress bar Whenever someone uploads.</li>
+                <li>Notes Details available without hovering on it.</li>
+                  <li>user can now edit already uploaded notes has been added to the profile page</li>
+            <li>user can now report your queries by adding screenshots of your issues in the 'Get In Touch' form. We will try our best to resolve them.</li>
+            <li>user can now search and sort the notes based on various options available in the Notes section.</li>
+            <li><b style="color:black;">Please Note:- The year field in the form available in 'Add Notes to Hub' section of the profile page indicates the "year of the note" rather than "the batch year". - If you have mentioned some wrong information you can edit it now from the profile page.</b></li>
+        </div>
+      </div>
+
+        </div>
+      </div>
+     <div class="modal-footer">
+      </div>
+  </div>
+</div> -->
+<body id="bodydiv">
+    <!--::header part start::-->
+    <header class="main_menu">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12" id ="bigdiv2">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <!-- <a class="navbar-brand main_logo logo-text" href="/users/home">Resource Hub</a>
+                        <a class="navbar-brand single_page_logo logo-text" href="/users/home">Resource Hub</a> -->
+                        <% if(flag==1){ %>
+                        <div class="profile-img">
+                            <a href="/profile"><img src="<%= user.avatar ? user.avatar : '/img/avatar.png' %>" alt=""></a>
+                        </div>
+                          <div class="mobile-view">
+                                <div><label><i class="fa fa-search" aria-hidden="true"></i></label>
+                                <input type="text" id="search1" class="fontAwesome" placeholder="Search user" onkeyup="search1()" style="padding-left:35px;"></div>
+                                <div class="search" id="srh1"></div>
+                                <ul class="search-view" id="search_list1">
+                                    <% users.forEach((user)=>{  %>
+                                        <li class="collection-item2"><a href="/users/publicProfile/<%=user._id%>"><%= user.name%></a></li>
+                                    <% }) %>
+
+                              </ul>
+                          </div>
+                    <% } %>
+                    <% if(flag == 0) { %>
+                              <div class="mobile-view1">
+                                <div><label><i class="fa fa-search" aria-hidden="true"></i></label>
+                                <input type="text" id="search1" class="fontAwesome" placeholder="Search user" onkeyup="search1()" style="padding-left:35px;"></div>
+                                <div class="search" id="srh1"></div>
+                                <ul class="search-view" id="search_list1">
+                                    <% users.forEach((user)=>{  %>
+                                        <li class="collection-item2"><a href="/users/publicProfile/<%=user._id%>"><%= user.name%></a></li>
+                                    <% }) %>
+
+                              </ul>
+                          </div>
+                         <% } %>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="menu_icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse main-menu-item" id="navbarSupportedContent">
+                            <ul class="navbar-nav" id="navs">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/" style="color:red;">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/#about">About</a>
+                                </li>
+                                <% if(flag==1){ %>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/profile"></i>Profile</a>
+                                    </li>
+                                <% } %>
+                                
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/users/branch">Hub</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#contact">Contact Us</a>
+                                </li>
+
+                                <li class="nav-item mobile-search">
+                                    <div class="searchcontainer">
+                                    <input type="text" id="search" placeholder="Search user">
+                                    <div class="search" id="srh"></div>
+                                    <ul class="search-view" id="search_list">
+                                        <% users.forEach((user)=>{  %>
+                                            <li class="collection-item"><a href="/users/publicProfile/<%=user._id%>"><%= user.name%></a></li>
+                                        <% }) %>
+                                    </ul>
+                                    </div>
+                                </li>
+                                <% if(flag==1){ %>
+                                    <li class="nav-item">
+                                        <a href="/users/logout" class="  btn_1 home_page_btn button logout">Logout</a>
+                                    </li>
+                                <% } %>
+                                
+                                
+                                
+                            </ul>
+                        </div>
+                        <% if(flag==0){ %>
+                            <a href="/users/signup" class="d-none d-sm-block btn_1 home_page_btn button"id="one" style="left: 10vw;position: relative;">Login</a>
+                        <% } %>
+                        
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--::Header part end::-->
+
+    <!--::banner part start::-->
+    <section class="banner_part" id="home">
+        <div class="container" id="bigdiv">
+           <div class="row align-items-center justify-content-between">
+                <div class="col-lg-5">
+                    <div class="banner_img d-none d-lg-block">
+                        <img src="/img/banner_img.png" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="banner_text">
+                        <div class="banner_text_iner">
+                            <h1 id="resource_hub">RESOURCE HUB</h1>
+                            <p>Notes, Question Papers... Everything at one place !</p>
+                            <!-- <div class="searchcontainer">
+                                <input type="text" placeholder="Search...">
+                                <div class="search"></div>
+                                <ul class="search-view" id="search_list">
+                                	<li><a href="">Topper</a></li>
+                                	<li><a href="">Topnkxsper</a></li>
+                                	<li><a href="">Topacsper</a></li>
+                                	<li><a href="">Toppxaer</a></li>
+                                	<li><a href="">Topxper</a></li>
+                                	<li><a href="">Topxczper</a></li>
+                                	<li><a href="">Topczxper</a></li>
+
+                              </ul>
+                          </div> -->
+                            <% if(flag==0){ %>
+                                <a href="/users/signup" class="btn_1 home_page_btn button"id="one">Login</a>
+                            <% } %>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="/img/animate_icon/Ellipse_7.png" alt="" class="feature_icon_1 custom-animation1">
+        <img src="/img/animate_icon/Ellipse_8.png" alt="" class="feature_icon_2 custom-animation2">
+        <img src="/img/animate_icon/Ellipse_1.png" alt="" class="feature_icon_3 custom-animation3">
+        <img src="/img/animate_icon/Ellipse_2.png" alt="" class="feature_icon_4 custom-animation4">
+        <img src="/img/animate_icon/Ellipse_3.png" alt="" class="feature_icon_5 custom-animation5">
+        <img src="/img/animate_icon/Ellipse_4.png" alt="" class="feature_icon_6 custom-animation6">
+    </section>
+    <!--::banner part end::-->
+
+    <!--::about_us part start::-->
+    <section class="about_us section_padding" id="about">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-md-6 col-lg-5">
+                    <div class="about_us_text">
+                        <h2>Your <br>
+                            Academic aid</h2>
+                        <p>Resource Hub is a common platform for uploading, downloading and requesting various notes, question papers etc related to our Institute 
+                            Curriculum. Students having any kind of study materials or textbooks can upload them in PDF, PPT or Word Document form in 
+                            this website, while the others can download them anytime according to their requirement. For any requirement of material, user will only have to request for it in the hub area and everyone will be informed about the request. With joint efforts of all the
+                             students, this Resource Hub can be turned into an effective solution to our academic queries.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6">
+                    <div class="learning_img">
+                        <img src="/img/about_img.png" alt="" id="imagedesktop">
+                        <img src="/img/banner_img.png" alt="" id="imagemobile">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="/img/animate_icon/Ellipse_4.png" alt="" class="feature_icon_1 custom-animation1">
+    </section>
+    <!--::about_us part end::-->
+
+    <!--::about_us part start::-->
+    <section class="about_us right_time">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-md-6 col-lg-6">
+                    <div class="learning_img">
+                        <img src="/img/about_img_1.png" alt="">
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-5">
+                    <div class="about_us_text">
+                        <img src="/img/icon/Icon_2.png" alt="">
+                        <h2>Perks of using Resource Hub</h2>
+                        <p>1. Resource Hub provides a hassle-free upload procedure where you just need to log in to your profile and upload any
+                             notes in PDF, Doc, PPT, DOCX Format. <br>
+                            2. It has an easy-to-use User Interface where you can easily locate study materials of any particular subject you are 
+                            looking for.<br>
+                            3. A Rating System has been provided for the materials uploaded which will help you identify the better ones and also which will rate the user.<br>
+                            4. Apart from downloading and uploading user can also request for a particular study material.<br>
+                            5. User's upload and download count is also to be displayed in the profile section.<br>
+                            6. You can check any user's profile for all the materials related to a particular user. <br>
+                            7. The count of views of your Profile will also be displayed in the profile page.<br>
+                            8. User can search any uploader and download his/her material from the page.<br>
+                            9. The Rating of user which will be displayed in the profile page will help the user have some perks in future.<br>
+                            10. You can edit the details of notes you have uploaded in case of any mistake.<br>
+                            11. You can search particular notes in the notes section of the hub by typing in the subject's or professor's name. Also you can sort materials by year or by rating.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="/img/animate_icon/Ellipse_5.png" alt="" class="feature_icon_2 custom-animation2">
+    </section>
+    <!--::about_us part end::-->
+
+    <!--FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-8 col-lg-8 text-center">
+                    <div class="section-title">
+                        <!-- <h4>FAQ's</h4> -->
+                        <h2>Frequently Asked <span>Question’s</span></h2>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col-xl-12 col-lg-12">
+                    <div class="accordion" id="accordionExample">
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                                How to login?
+                                            </button>
+                                        </h5>
+                                    </div>
+    
+                                    <div id="collapseOne" class="collapse" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                        <ul style="list-style-type:disc"><li>Click on the login button on the home page.</li><li> If you have not signed up earlier, fill the details and click on the signup button. </li>
+                                        <li>A verification email will be sent to the registered email address.</li><li> Go to your email and click on that link.</li> 
+                                        <li>A 'Verified Successfully' message will appear.</li> 
+                                        <li>Click on the login link at the bottom, add your login details and click on login.</li>  
+                                    </ul>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                               How to add a material (note/question paper)?
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            <ul style="list-style-type:disc">
+                                            <li>Go to the profile page.</li><li>click on add note button</li><li> Fill the options and submit. (Kindly, see the uploading percentage in the bottom left of screen).</li>
+                                            </ul> 
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                               How to Remove a material (note/question paper)? 
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseThree" class="collapse" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            <ul style="list-style-type:disc">
+                                            <li>Go to the profile section.See the list of notes you have uploaded. </li> <li>Click on the delete icon along with the material you want to delete.</li>
+                                            </ul>  
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapse13" aria-expanded="false" aria-controls="collapseThree">
+                                                How to edit a material(note/question)?                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapse13" class="collapse" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            <ul style="list-style-type:disc">
+                                                <li>Open your profile and move to the Notes List</li>
+                                                <li>click on the Edit Icon on the right of the concerned note</li>
+                                                <li>Fill in the details and click "Edit Details" button</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapse4" aria-expanded="false" aria-controls="collapseThree">
+                                                How to check the materials (notes/question papers) available? 
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapse4" class="collapse" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                             <ul style="list-style-type:disc">
+                                            <li>Go to the Hub section from Navbar.</li><li>Click on the branch button.</li>
+                                            <li>Click on either the view note or view question paper in the desired semester. The material page will appear. </li>
+                                        </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                           <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapse5" aria-expanded="false" aria-controls="collapseOne">
+                                                How to request materials (notes/question papers) ? 
+                                            </button>
+                                        </h5>
+                                    </div>
+    
+                                    <div id="collapse5" class="collapse" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                             <ul style="list-style-type:disc">
+                                            <li>In the notes page, click on the request note/question button. </li><li>Fill all the details and submit it.</li>
+                                        </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapse6" aria-expanded="false" aria-controls="collapseTwo">
+                                                How to check the requested items? 
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapse6" class="collapse" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                             <ul style="list-style-type:disc">
+                                                <li>
+                                            Go to the profile page and check the request bar. </li>
+                                           <li> The subject with a strike in it means it is already being uploaded by some user. </li>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                            </div>
+                    
+                            <div class="col-xl-6 col-lg-6">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapse7" aria-expanded="false" aria-controls="collapseThree">
+                                                How to check other profiles? 
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapse7" class="collapse" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                             <ul style="list-style-type:disc">
+                                            <li>Click on the search button on the home page. </li><li>Type the name, click on the name which will appear.</li></ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapse8" aria-expanded="false" aria-controls="collapseThree">
+                                                How to check materials related to a particular user? 
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapse8" class="collapse" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                             <ul style="list-style-type:disc">
+                                          <li> Go to the search bar on the home page.</li><li> Search for the user name and click on user name.</li><li> After going to the particular user's profile page, check the notes he/she has uploaded. </li>
+                                      </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                                               <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapse9" aria-expanded="false" aria-controls="collapseThree">
+                                                How does the profile view count work?  
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapse9" class="collapse" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                             <ul style="list-style-type:disc">
+                                                <li>
+                                           Whenever someone visits another profile page, the count will increase by one.</li>
+                                       </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                                               <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapse10" aria-expanded="false" aria-controls="collapseThree">
+                                                How does the download/upload count work?                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapse10" class="collapse" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                             <ul style="list-style-type:disc">
+                                                <li>
+                                           Whenever someone downloads/uploads a material, the download/upload count will increase by one.</li>
+                                       </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapse14" aria-expanded="false" aria-controls="collapseThree">
+                                                How to rate materials?                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapse14" class="collapse" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                             <ul style="list-style-type:disc">
+                                                <li>
+                                                    In the Notes Section, click on the particular note.
+                                                </li>
+                                                <li>
+                                                    You will find a 5-star rating section at the bottom of the note where you can input the desired rating.
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapse11" aria-expanded="false" aria-controls="collapseThree">
+                                                How does the rating system work?                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapse11" class="collapse" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                             <ul style="list-style-type:disc">
+                                                <li>
+                                           A user can rate the materials uploaded by other users.</li><li> The average of all the ratings will appear on the profile page of the user who uploaded it. However, a user cannot rate his own materials.</li></ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapse12" aria-expanded="false" aria-controls="collapseThree">
+                                                How to update profile?  
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapse12" class="collapse" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                             <ul style="list-style-type:disc">
+                                                <li>
+                                        Click on the edit detail button on the profile page and add details in it.</li></ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+    
+                            </div>
+    
+                        </div>
+    
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- End FAQ Section -->
+    <!--::client logo part end::-->
+    <hr id="contacthr">
+
+    <!-- Contact Form-->
+    <section class="contact-section section_padding" id="contact">
+        <!-- <div> -->
+            <!-- <div class="col-20"> -->
+              <h2 class="contact-title">Get in Touch</h2>
+              <div style="margin-bottom: 8vh;
+              text-align: center;
+              font-size: 3vh;
+              text-decoration: underline;">
+                <%= message != '' ? message : '' %>
+            </div>
+            <!-- </div> -->
+            <!-- <div class="col-lg-6"> -->
+              <form class="form-contact contact_form" action="/contactus" method="post" id="contactForm" enctype="multipart/form-data">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="form-group">
+    
+                      <textarea class="form-control w-100" name="message" id="message" cols="30" rows="9"
+                        onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'"
+                        placeholder='Enter Message' required></textarea>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                    <% if(typeof user !== 'undefined') { %>
+                      <input class="form-control" name="name" id="name" type="text" value="<%= typeof user !== 'undefined' ? user.name : '' %>" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Name'"
+                      placeholder='Enter Name' readonly>
+                    <% } %>
+                    <% if(typeof user === 'undefined') { %>
+                        <input class="form-control" name="name" id="name" type="text" value="<%= typeof user !== 'undefined' ? user.name : '' %>" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Name'"
+                        placeholder='Enter Name'>
+                    <% } %>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                    <% if(typeof user !== 'undefined') { %>
+                      <input class="form-control" name="email" id="email" type="email" value="<%= typeof user !== 'undefined' ? user.email : '' %>" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email'"
+                      placeholder='Enter Email' readonly>
+                    <% } %>
+                    <% if(typeof user === 'undefined') { %>
+                        <input class="form-control" name="email" id="email" type="email" value="<%= typeof user !== 'undefined' ? user.email : '' %>" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email'"
+                        placeholder='Enter Email'>
+                      <% } %>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-group">
+                      <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''"
+                        onblur="this.placeholder = 'Enter Subject'" placeholder='Enter Subject' required>
+                    </div>
+                  </div>
+                </div>
+                <p>Upload screenshots of errors if any!</p><br>
+                <label class="custom-file-upload" style="color:black !important; font-size: 15px; font-weight: bold;width: 45vw;">
+          
+                    <input name="issue" type="file" id="file-upload1" class="file-path validate" style="position: relative;left:0.2vw" multiple />
+                    <span><i class="fas fa-upload"></i></span>
+                    UPLOAD
+                    <hr>
+                    <span id="file-selected1"></span>
+                </label>
+                <p style="text-align: center; display: none;">
+                    <input type="submit" value="Upload">
+                </p><br>
+                <div class="form-group mt-3">
+                    <button type="submit" class="button button-contactForm btn_1">Send Message <i class="flaticon-right-arrow"></i> </button>
+                </div>
+                
+              </form>
+    </section>
+    
+
+    <!--::footer_part start::-->
+    <footer class="footer_part">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 col-md-4 col-lg-3">
+                    <div class="single_footer_part">
+                        <h4>Developers</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="/developers">Ankit Srivastava</a></li>
+                            <li><a href="/developers">Ujjawal Jain</a></li>
+                            <li><a href="/developers">Anuva Bhattacharjee</a></li>
+                            <li><a href="/developers" class="developers-details">Know More About Developers</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-2">
+                    <div class="single_footer_part">
+                        <h4>Popular Notes</h4>
+                        <ul class="list-unstyled">
+                            <% popularNotes.forEach((note) => { %>
+                                <li style="overflow:hidden; max-height: 30px;"><a href="/users/branch/semester/notes?branch=<%= note.branch %>&semester=<%= note.semester %>"><%= note.subject %>,<%= note.semester %>,<%= note.branch %></a></li>
+                            <% }); %>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-2">
+                    <div class="single_footer_part">
+                        <h4>Recent Uploads</h4>
+                        <ul class="list-unstyled">
+                            <% recentNotes.forEach((note) => { %>
+                            <li style="overflow:hidden; max-height: 30px;"><a href="/users/branch/semester/notes?branch=<%= note.branch %>&semester=<%= note.semester %>"><%= note.subject %>,<%= note.semester %>,<%= note.branch %></a></li>
+                            <% }); %>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-2">
+                    <div class="single_footer_part">
+                        <h4>Most Downloaded</h4>
+                        <ul class="list-unstyled">
+                            <% mostDownloaded.forEach((note) => { %> 
+                            <li style="overflow:hidden; max-height: 30px;"><a href="/users/branch/semester/notes?branch=<%= note.branch %>&semester=<%= note.semester %>"><%= note.subject %> <%= note.semester %> <%= note.branch %></a></li>
+                            <% }); %>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-3 col-lg-3">
+                    <div class="single_footer_part">
+                        <h4>Popular Profiles</h4>
+                        <ul class="list-unstyled">
+                            <% popularProfile.forEach((profile) => { %>
+                            <li><a href="/users/publicProfile/<%= profile._id %>"><%= profile.name %></a></li>
+                            <% }); %>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr>
+    </footer>
+    <!--::footer_part end::-->
+    <!-- jquery plugins here-->
+    <script src="/js/jquery-1.12.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/mail-script.js"></script>
+    <script src="/js/custom.js"></script>
+    <script>
+        $('#file-upload1').bind('change', function() { 
+        var fileName = ''; 
+        fileName = $(this).val(); $('#file-selected1').html(fileName); 
+        })
+        
+        //for desktop view
+
+        let bigdiv = document.getElementById('bigdiv');
+        bigdiv.addEventListener('click',()=>{
+            let ul = document.getElementById('search_list');
+                        if(ul.style.display !== "none"){
+                            ul.style.display = "none";
+                            flag = 1;
+                        }
+        })
+        let bigdiv2 = document.getElementById('bigdiv2');
+        bigdiv2.addEventListener('click',()=>{
+            let ul = document.getElementById('search_list');
+                        if(ul.style.display !== "none"){
+                            ul.style.display = "none";
+                            flag = 1;
+                        }
+        })
+        
+        
+
+        //get input element
+        let filterInput = document.getElementById('search');
+                    let srh = document.getElementById('srh');
+                    var flag = 1;
+                    srh.addEventListener('click',()=>{
+                        let ul = document.getElementById('search_list');
+                        if(ul.style.display !== "none" || flag ==0){
+                            ul.style.display = "none";
+                            flag = 1;
+                        }
+                    });
+        
+                    
+
+
+        //add event listener
+        filterInput.addEventListener('keyup',filternames);
+
+        function filternames(){
+            //get value of input
+            let filterValue = document.getElementById('search').value.toUpperCase();
+            //Get names ul
+            let ul = document.getElementById('search_list');
+            //get lis from ul
+            let li = ul.querySelectorAll('li.collection-item');
+            ul.style.display = 'block';
+            //loop through collection item lis
+
+            for(let i=0;i< li.length;i++){
+                let a = li[i].getElementsByTagName('a')[0];
+                console.log(a,filterValue)
+                //if matched
+
+                if(a.innerHTML.toUpperCase().indexOf(filterValue)>-1 && filterValue!=''){
+                    li[i].style.display = 'block';
+                }
+                else{
+                    li[i].style.display = 'none';
+                }
+            }
+            
+        }
+
+
+
+    </script>
+    <script>
+        let bigdiv3 = document.getElementById('bigdiv');
+        bigdiv3.addEventListener('click',()=>{
+            let ul = document.getElementById('search_list1');
+                        if(ul.style.display !== "none"){
+                            ul.style.display = "none";
+                            flag = 1;
+                        }
+        })
+        let bigdiv4 = document.getElementById('bigdiv2');
+        bigdiv4.addEventListener('click',()=>{
+            let ul = document.getElementById('search_list1');
+                        if(ul.style.display !== "none"){
+                            ul.style.display = "none";
+                            flag = 1;
+                        }
+        })
+
+        //get input element
+        let filterInput2 = document.getElementById('search1');
+                    let srh2 = document.getElementById('srh1');
+                    var flag = 1;
+                    srh2.addEventListener('click',()=>{
+                        let ul = document.getElementById('search_list1');
+                        if(ul.style.display !== "none" || flag ==0){
+                            ul.style.display = "none";
+                            flag = 1;
+                        }
+                    });
+        //add event listener
+        filterInput2.addEventListener('keyup',filternames2);
+
+        function filternames2(){
+            //get value of input
+            let filterValue = document.getElementById('search1').value.toUpperCase();
+            //Get names ul
+            let ul = document.getElementById('search_list1');
+            //get lis from ul
+            let li = ul.querySelectorAll('li.collection-item2');
+            ul.style.display = 'block';
+            //loop through collection item lis
+
+            for(let i=0;i< li.length;i++){
+                let a = li[i].getElementsByTagName('a')[0];
+                console.log(a,filterValue)
+                //if matched
+
+                if(a.innerHTML.toUpperCase().indexOf(filterValue)>-1 && filterValue!=''){
+                    li[i].style.display = 'block';
+                }
+                else{
+                    li[i].style.display = 'none';
+                }
+            }
+            
+        }
+        var bodydiv = document.getElementById('bodydiv');
+        bodydiv.addEventListener('click', clickOutside);
+        function clickOutside(e){ let ul = document.getElementById('search_list');
+                        if(ul.style.display !== "none"){
+                            ul.style.display = "none";
+                            flag = 1;
+                        }
+        }
+    </script>
+    <!-- <script>
+        //this is for desktop view
+    	$(document).click(function(event) { 
+  $target = $(event.target);
+  if(!$target.closest('#search_list').length && 
+  $('#search_list').is(":visible")) {
+    $('#search_list').hide();
+  }        
+});
+    </script> -->
+    <!-- <script>
+    	$(document).click(function(event) { 
+  $target = $(event.target);
+  if(!$target.closest('#search_list1').length && 
+  $('#search_list1').is(":visible")) {
+    $('#search_list1').hide();
+  }        
+});
+    </script> -->
+
+    <script> 
+        window.onload = function(){
+            document.querySelector("#preloader").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>

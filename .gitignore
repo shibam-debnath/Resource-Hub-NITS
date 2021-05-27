@@ -1,0 +1,5 @@
+node_modules
+/Public/uploads/
+/Public/uploadsNotes/
+/Public/issue/
+/config/keys_dev.js
