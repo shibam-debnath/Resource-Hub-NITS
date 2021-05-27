@@ -3,3 +3,4 @@ node_modules
 /Public/uploadsNotes/
 /Public/issue/
 /config/keys_dev.js
+resource-hub.pem
