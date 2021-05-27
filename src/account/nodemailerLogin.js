@@ -12,7 +12,7 @@ var transporter = nodemailer.createTransport({
     },
     pool: true
   });
-  const url = `http://18.191.249.98:3000/users/signup/${data.token}?data=${data.id}`;
+  const url = `http://13.235.52.209/users/signup/${data.token}?data=${data.id}`;
   // const url = `http://localhost:3000/users/signup/${data.token}?data=${data.id}`;
   var mailOptions = {
     from: keys.mail.email,
@@ -61,7 +61,7 @@ var transporter = nodemailer.createTransport({
     },
     pool: true
   });
-  const url = `http://18.191.249.98:3000/users/forgotPassword/${data.token}?data=${data.id}`;
+  const url = `http://13.235.52.209/users/forgotPassword/${data.token}?data=${data.id}`;
   // const url = `http://localhost:3000/users/forgotPassword/${data.token}?data=${data.id}`;
   var mailOptions = {
     from: keys.mail.email,

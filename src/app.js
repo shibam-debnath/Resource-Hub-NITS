@@ -16,8 +16,7 @@ const app = express();
 app.use(express.json())
 
 //configuring db
-
-mongoose.connect('mongodb+srv://resource-hub:resource.hub2020!!@resource-hub-cluster-gmsj7.mongodb.net/test?retryWrites=true&w=majority',{
+mongoose.connect('mongodb+srv://tecnoesis:tecnoesis@cluster0.m0nlm.mongodb.net/ResourceHub?retryWrites=true&w=majority',{
     useNewUrlParser:true,
     useUnifiedTopology:true,
     useFindAndModify:false,
