@@ -234,6 +234,7 @@ userRouter.get('/facebook/callback', passport.authenticate("facebook", {
     failureRedirect: "/users/signup"
   }));
 
+// linkedin login
 
   userRouter.get('/linkedin',
   passport.authenticate('linkedin')
