@@ -10,7 +10,7 @@
     <link rel="icon" href="/img/favicon.png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
 <style>
-.social-container1 {
+/* .social-container1 {
   text-align: center;
 }
 .sociallinkbtn {
@@ -62,7 +62,7 @@
     top: -10%;
     left: -10%;
   }
-}
+/* } */
 .logo{
   font-size:2.7rem;
 }
@@ -73,7 +73,45 @@
 }
 .dis{
   background: slategrey !important;
+}  */
+html
+{
+  background-color: #786CFF                              ;
 }
+
+.signup-container
+{
+  background-color: #786CFF;
+  background-size: cover;
+  /* height: 200vh;
+  width: 100vw; */
+  overflow: hidden;
+  display: flex;
+  /* z-index: 2; */
+}
+.signup-logo
+{
+  width: 10%;
+  height: 10%;
+}
+.right
+{
+  position: absolute;
+  width: 50%;
+  height: 50%; 
+}
+.left
+{
+  position:absolute;
+  left: 60%;
+}
+.left-img
+{
+  width: 90%;
+  height: 90%;
+  padding: 40px;
+}
+
 </style>
 </head>
 <body>
@@ -99,26 +137,26 @@
       </li>
     </ul>
   </nav>
-<div class="container">
+<!-- <div class="container">
    <section id="formHolder">
 
-      <div class="row">
+      <div class="row"> -->
 
         
 
          <!-- Brand Box -->
-         <div class="col-sm-6 brand cover">
+         <!-- <div class="col-sm-6 brand cover">
          	<video src="/img/particle.mp4" muted="" autoplay="" loop></video>
           <h3 class="tag"><span>R</span>esource <span>H</span>ub <span>N</span>ITS</h3>
-         </div>
+         </div> -->
 
          
          <!-- Form Box -->
-         <div class="col-sm-6 form">
+         <!-- <div class="col-sm-6 form"> -->
 
             <!-- Login Form -->
 
-            <div class="login form-peice">
+            <!-- <div class="login form-peice">
               <div class="error-scroll" id="error">
                 <%- include('./partials/messages') %>
             </div>
@@ -154,10 +192,10 @@
                     <p style="margin-top: 5vh;color: #524f4f;">Don't have an account? - <a href="#" class="switch" style="font-size: 13px;"><b>Sign Up</b></a></p>
                   </div>
                </form>
-                 <p style="position: relative;top: 75vh;left: 25vw;color: #524f4f;font-size: 13px;"><a href="/users/forgotPassword"><b>Forgot Password</b></a></p>
-            </div><!-- End Login Form -->
+                 <p style="position: relative;top: 75vh;left: 25vw;color: #524f4f;font-size: 13px;"><a href="/users/forgotPassword"><b>Forgot Password</b></a></p> -->
+            <!-- </div>End Login Form -->
             <!-- Signup Form -->
-            <div class="signup form-peice switched">
+            <!-- <div class="signup form-peice switched">
                 
                <form class="signup-form" id="signupForm" action="/users/signup" method="post" style="position:absolute;margin-top: 12px;">
                    <h3 id="signh3" class="heading">Create Account</h3>
@@ -196,10 +234,10 @@
                      <label for="passwordCon">Confirm Password</label>
                      <input type="password" name="password2" id="passwordCon" class="passConfirm" value="<%= typeof password2 != 'undefined' ? password2 : '' %>" required="true">
                      <span class="error"></span>
-                  </div>
+                  </div> -->
                   <!-- <input type="checkbox" id="terms" name="terms" value="terms">
                   <label for="terms">Terms and Conditions</label> -->
-                  <p style="text-align: center; margin-top: 20px;"><input type="checkbox" id="terms" value="yes" name="terms" style="width: 15px; float: left;">I agree to the <a href="../terms.html" target="_blank">Terms and Conditions</a></p>
+                  <!-- <p style="text-align: center; margin-top: 20px;"><input type="checkbox" id="terms" value="yes" name="terms" style="width: 15px; float: left;">I agree to the <a href="../terms.html" target="_blank">Terms and Conditions</a></p>
                   
                   <div class="CTA">
                     <input type="submit" id="sub" value="Sign Up">
@@ -207,9 +245,24 @@
                     <p style="margin-top: 14px;color:#524f4f">Already have an account? - <a href="#" class="switch"style="font-size: 13px;"><b>Login</b></a></p>
                      
                   </div>
-               </form>
-            </div><!-- End Signup Form -->
-         </div>
+               </form> -->
+            <!-- </div>End Signup Form -->
+
+
+            <!-- New Signup Page -->
+            <div class="signup-container">
+              <img class="signup-logo" src="/img/signup-logo.png" alt="" srcset="">
+              <div class="container-right">
+               <img class="right-img" src="/img/girl.png" alt="" srcset="">
+              </div>
+              <div class="left">
+                <div class="signup-form">
+                 
+                  <img class="left-img" src="/img/Rectangle-1.png" alt="" srcset="">
+                </div>
+              </div>
+            </div>
+         </div>  
       </div>
 
    </section>
