@@ -134,16 +134,37 @@ x.addEventListener("click", function(){
     eye.style.display = "block";
 })
 
-var eye1 = document.getElementById("eye1");
-var x = document.getElementById("loginPassword");
+var eye2 = document.getElementById("eye2");
+var x = document.getElementById("passwordCon");
 x.addEventListener("click", function(){
-    eye1.style.display = "block";
+    eye2.style.display = "block";
 })
+
+// var eye1 = document.getElementById("eye1");
+// var x = document.getElementById("loginPassword");
+// x.addEventListener("click", function(){
+//     eye1.style.display = "block";
+// })
 
 function passwordfnsign(){
     var x1 = document.getElementById("password");
-    var y1 = document.getElementById("hide3");
-    var z1 = document.getElementById("hide4");
+    var y1 = document.getElementById("signup-hide1");
+    var z1 = document.getElementById("signup-hide2");
+    if(x1.type === 'password'){
+        x1.type = "text";
+        y1.style.display = "block";
+        z1.style.display = "none";
+    } else {
+        x1.type = "password";
+        y1.style.display = "none";
+        z1.style.display = "block";
+    }
+}
+
+function passwordfnsign2(){
+    var x1 = document.getElementById("passwordCon");
+    var y1 = document.getElementById("signup-hide3");
+    var z1 = document.getElementById("signup-hide4");
     if(x1.type === 'password'){
         x1.type = "text";
         y1.style.display = "block";
