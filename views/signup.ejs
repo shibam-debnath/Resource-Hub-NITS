@@ -70,7 +70,7 @@
 .nav-links{font-size:1.6rem;}
 .wrong{
   color:red !important;
-  border-bottom: 1px solid red !important;
+  border: 1px solid red !important;
 }
 .dis{
   background: slategrey !important;
@@ -257,7 +257,42 @@
             <img class="signup-illustration" src="/img/signup/form-illustration.png" alt="" srcset="">
           </div>
           <div class="container-right">
-            <div class="signup-form">
+            <div class="error-scroll" id="error">
+              <%- include('./partials/messages') %>
+            </div>
+            <div class="login-form form-peice">
+              <form class="login-form" action="/users/login" method="post">
+                <h3 id="logh3" class="heading">Get Started</h3>
+               <div class="form-group">
+                  <input type="email" name="email" id="loginemail" placeholder="Enter your email">
+               </div>
+
+               <div class="form-group">
+                   <div id="eye1" onclick="passwordfnlog()">
+                     <i id="hide1" class="fa fa-eye"></i>
+                     <i id="hide2" class="fa fa-eye-slash"></i>
+                   </div>
+                  <input type="password" name="password" id="loginPassword" placeholder="Enter your password">
+                  
+               </div>
+
+               <div class="CTA">
+                  <input type="submit" value="Log In" class="submit-btn">
+                  <br>
+                 <p style="margin-top: 5vh;color: #524f4f;">Don't have an account? - <a href="#" class="switch" style="font-size: 13px;"><b>Sign Up</b></a></p>
+               </div>
+               <div class="external-links">
+                <div class="hr-sect">or login using</div>
+                <div class="social-container1">
+                 <a class="sociallinkbtn" ><img src="/img/icons/facebook.png" alt="facebook"></a>
+                 <a class="sociallinkbtn" ><img src="/img/icons/google.png" alt="google"></a>
+                 <a class="sociallinkbtn" ><img src="/img/icons/linkedin.png" alt="linkedin"></a>
+               </div>
+               </div>
+            </form>
+              <p style="text-align: center;"><a href="/users/forgotPassword"><b>Forgot Password ?</b></a></p> 
+            </div>
+            <div class="signup-form form-peice switched">
               <form class="signup-form" id="signupForm" action="/users/signup" method="post" style="position:absolute;margin-top: 12px;">
                 <h3 id="signh3" class="heading">Create an Account</h3>
                 
@@ -288,12 +323,10 @@
                   <input type="password" name="password2" id="passwordCon" placeholder="Enter your password again" class="passConfirm" value="<%= typeof password2 != 'undefined' ? password2 : '' %>" required="true">
                   <span class="error"></span>
                 </div> 
-                <!-- <input type="checkbox" id="terms" name="terms" value="terms">
-                  <label for="terms">Terms and Conditions</label> -->
                   <p style="text-align: center; margin-top: 20px;"><input type="checkbox" id="terms" value="yes" name="terms" style="margin-right: 1rem;">I agree to the <a href="../terms.html" target="_blank">Terms and Conditions</a></p>
                   
                   <div class="CTA">
-                    <input type="submit" id="sub" value="Sign Up">
+                    <input type="submit" id="sub" class="submit-btn" value="Sign Up">
                     <br>
                   </div>
                   <div class="external-links">
@@ -304,9 +337,10 @@
                      <a class="sociallinkbtn" ><img src="/img/icons/linkedin.png" alt="linkedin"></a>
                    </div>
                   </div>
-                    <p style="margin-top: 14px;color:#524f4f">Already have an account? - <a href="#" class="switch"style="font-size: 13px;"><b>Login</b></a></p>
-            </form> 
+                    <p style="margin-top: 14px;color:#524f4f">Already have an account? - <a href="#" class="switch" style="font-size: 13px;"><b>Login</b></a></p>
+              </form> 
             </div>
+            
           </div>
 
         </section>

@@ -184,8 +184,10 @@ form {
   text-align: center;
 }
 
-.signup-form form .heading{
+.signup-form form .heading,
+.login-form form .heading{
   color: #6675F8;
+  font-size: 4rem;
   font-weight: bold;
   margin: 4rem auto;
 }
@@ -197,11 +199,12 @@ form {
   border: 1px solid rgb(65, 65, 65);
 }
 
-.signup-form input{
-  margin: .5rem auto;
+.signup-form input,
+.login-form input{
+  margin: .4rem auto;
 }
 
-.CTA #sub{
+.submit-btn{
   background-color: #FF842B;
   color: white;
   font-weight: bold;
@@ -231,7 +234,7 @@ form {
 }
 
 .sociallinkbtn{
-  margin: 0 1rem;
+  margin: 1rem 1rem;
 }
 
 /* Eye */
@@ -278,4 +281,12 @@ form {
 #signup-hide4{
   cursor: pointer;
   font-size: 20px;
+}
+
+.form-peice{
+  z-index: block;
+}
+
+.form-peice.switched {
+  display: none;
 }
