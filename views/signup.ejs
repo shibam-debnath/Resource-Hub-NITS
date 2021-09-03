@@ -6,7 +6,8 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway:300,600" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
-    <link rel="stylesheet" href="/css/signup.css">
+    <!-- <link rel="stylesheet" href="/css/signup.css"> -->
+    <link rel="stylesheet" href="/css/new-signup.css">
     <link rel="icon" href="/img/favicon.png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
 <style>
@@ -73,21 +74,17 @@
 }
 .dis{
   background: slategrey !important;
-}  */
-html
-{
-  background-color: #786CFF                              ;
-}
+}  
 
-.signup-container
+/* .signup-container
 {
   background-color: #786CFF;
   background-size: cover;
-  /* height: 200vh;
-  width: 100vw; */
+  height: 200vh;
+  width: 100vw;
   overflow: hidden;
   display: flex;
-  /* z-index: 2; */
+  z-index: 2;
 }
 .signup-logo
 {
@@ -110,7 +107,7 @@ html
   width: 90%;
   height: 90%;
   padding: 40px;
-}
+} */
 
 </style>
 </head>
@@ -247,28 +244,80 @@ html
                   </div>
                </form> -->
             <!-- </div>End Signup Form -->
+         <!-- </div>  
+      </div>  -->
 
+      <!-- New Signup Page -->
+      <!-- <div class="container"> -->
 
-            <!-- New Signup Page -->
-            <div class="signup-container">
-              <img class="signup-logo" src="/img/signup-logo.png" alt="" srcset="">
-              <div class="container-right">
-               <img class="right-img" src="/img/girl.png" alt="" srcset="">
-              </div>
-              <div class="left">
-                <div class="signup-form">
-                 
-                  <img class="left-img" src="/img/Rectangle-1.png" alt="" srcset="">
+        <section id="formHolder">
+
+          <div class="container-left">
+            <img class="signup-logo" src="/img/signup/logo.png" alt="" srcset="">
+            <img class="signup-illustration" src="/img/signup/form-illustration.png" alt="" srcset="">
+          </div>
+          <div class="container-right">
+            <div class="signup-form">
+              <form class="signup-form" id="signupForm" action="/users/signup" method="post" style="position:absolute;margin-top: 12px;">
+                <h3 id="signh3" class="heading">Create an Account</h3>
+                
+                <div class="form-group">
+                  <input type="text" name="name" placeholder="Enter your name" id="name" class="name" value="<%= typeof name != 'undefined' ? name : '' %>" required="true" >
+                  <span class="error"></span>
                 </div>
-              </div>
+                
+                <div class="form-group">
+                  <input type="email" name="email" id="email" placeholder="Enter your email" class="email" value="<%= typeof email != 'undefined' ? email : '' %>" onchange="validateEmail()" required="true">
+                  <span class="error"></span>
+                </div>
+                
+                <div class="form-group password-input">
+                  <div id="eye" onclick="passwordfnsign()">
+                    <i id="signup-hide1" class="fa fa-eye"></i>
+                    <i id="signup-hide2" class="fa fa-eye-slash"></i>
+                  </div>
+                  <input type="password" name="password" id="password" placeholder="Enter your password" class="pass" value="<%= typeof password != 'undefined' ? password : '' %>" required="true">
+                  <span class="error"></span>
+                </div>
+                
+                <div class="form-group password-input">
+                  <div id="eye2" onclick="passwordfnsign2()">
+                    <i id="signup-hide3" class="fa fa-eye"></i>
+                    <i id="signup-hide4" class="fa fa-eye-slash"></i>
+                  </div>
+                  <input type="password" name="password2" id="passwordCon" placeholder="Enter your password again" class="passConfirm" value="<%= typeof password2 != 'undefined' ? password2 : '' %>" required="true">
+                  <span class="error"></span>
+                </div> 
+                <!-- <input type="checkbox" id="terms" name="terms" value="terms">
+                  <label for="terms">Terms and Conditions</label> -->
+                  <p style="text-align: center; margin-top: 20px;"><input type="checkbox" id="terms" value="yes" name="terms" style="margin-right: 1rem;">I agree to the <a href="../terms.html" target="_blank">Terms and Conditions</a></p>
+                  
+                  <div class="CTA">
+                    <input type="submit" id="sub" value="Sign Up">
+                    <br>
+                  </div>
+                  <div class="external-links">
+                    <div class="hr-sect">or sign up with</div>
+                    <div class="social-container1">
+                     <a class="sociallinkbtn" ><img src="/img/icons/facebook.png" alt="facebook"></a>
+                     <a class="sociallinkbtn" ><img src="/img/icons/google.png" alt="google"></a>
+                     <a class="sociallinkbtn" ><img src="/img/icons/linkedin.png" alt="linkedin"></a>
+                   </div>
+                  </div>
+                    <p style="margin-top: 14px;color:#524f4f">Already have an account? - <a href="#" class="switch"style="font-size: 13px;"><b>Login</b></a></p>
+            </form> 
             </div>
-         </div>  
-      </div>
+          </div>
+
+        </section>
+
+      <!-- </div> -->
+      <!--             
 
    </section>
 
 
-</div>
+</div> -->
 <!-- partial -->
   <script>
 
