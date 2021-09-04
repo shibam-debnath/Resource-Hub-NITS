@@ -162,13 +162,14 @@ userRouter.post('/signup',(req,res)=>{
                             newUser.save()
                                 .then(user => {
                                 console.log("New user: ",user);
-                                confirmUser({
-                                    name:user.name,
-                                    email:user.email,
-                                    id:user._id,
-                                    token:user.token
-                                })
-                                req.flash('success_msg','Successfuly registered, verify your account at email');
+                                // TODO: Remove verification of account
+                                // confirmUser({
+                                //     name:user.name,
+                                //     email:user.email,
+                                //     id:user._id,
+                                //     token:user.token
+                                // })
+                                req.flash('success_msg','Successfuly registered, please login!');
                                 //req.flash('success_msg', 'You are now registered and can log in');   
                                 //to display the flash message we will use messages.ejs in partials
                                 
