@@ -249,36 +249,26 @@ form {
   position: relative;
 }
 
-#eye{
+#eye,#eye2{
   position: absolute;
   top: 27%;
   right: 17%;
   display: none;
 }
 
-#signup-hide1 {
-  display: none;
-  cursor: pointer;
-  font-size: 20px;
-}
-#signup-hide2{
-  cursor: pointer;
-  font-size: 20px;
-}
-
-#eye2{
+#eye3{
   position: absolute;
-  top: 27%;
+  top: 30%;
   right: 17%;
   display: none;
 }
 
-#signup-hide3 {
+#signup-hide1,#signup-hide3, #login-hide1 {
   display: none;
   cursor: pointer;
   font-size: 20px;
 }
-#signup-hide4{
+#signup-hide2, #signup-hide4, #login-hide2{
   cursor: pointer;
   font-size: 20px;
 }

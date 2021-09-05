@@ -260,6 +260,8 @@
             <div class="error-scroll" id="error">
               <%- include('./partials/messages') %>
             </div>
+
+            <!-- Updated login form -->
             <div class="login-form form-peice">
               <form class="login-form" action="/users/login" method="post">
                 <h3 id="logh3" class="heading">Get Started</h3>
@@ -268,9 +270,9 @@
                </div>
 
                <div class="form-group">
-                   <div id="eye1" onclick="passwordfnlog()">
-                     <i id="hide1" class="fa fa-eye"></i>
-                     <i id="hide2" class="fa fa-eye-slash"></i>
+                   <div id="eye3" onclick="passwordfnsign3()">
+                     <i id="login-hide1" class="fa fa-eye"></i>
+                     <i id="login-hide2" class="fa fa-eye-slash"></i>
                    </div>
                   <input type="password" name="password" id="loginPassword" placeholder="Enter your password">
                   
@@ -292,6 +294,8 @@
             </form>
               <p style="text-align: center;"><a href="/users/forgotPassword"><b>Forgot Password ?</b></a></p> 
             </div>
+
+            <!-- Updated signup form -->
             <div class="signup-form form-peice switched">
               <form class="signup-form" id="signupForm" action="/users/signup" method="post" style="position:absolute;margin-top: 12px;">
                 <h3 id="signh3" class="heading">Create an Account</h3>
