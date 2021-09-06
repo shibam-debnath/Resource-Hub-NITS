@@ -280,3 +280,43 @@ form {
 .form-peice.switched {
   display: none;
 }
+
+input.loginInput,
+input.signinInput{
+  background-position: 5px;
+  background-size:contain;
+  background-repeat: no-repeat;
+  text-indent: 45px;
+}
+
+input#loginemail{
+  background-image: url("/img/icons/email.png");
+}
+
+input#loginPassword{
+  background-size: 32px;
+  background-position: 7px;
+  background-image: url("/img/icons/password.png");
+}
+
+input#password, input#passwordCon {
+  background-size: 32px;
+  background-position: 7px;
+  background-image: url("/img/icons/password.png");
+}
+
+input#name{
+  background-image: url("/img/icons/user.png");
+}
+
+input#email{
+  background-image: url("/img/icons/email.png");
+}
+
+input.loginInput:focus,
+input.signinInput:focus,
+input.loginInput:not(:placeholder-shown),
+input.signinInput:not(:placeholder-shown){
+  background-image: none !important;
+  text-indent: 2px;
+}
