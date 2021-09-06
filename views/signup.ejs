@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" >
 <head>
@@ -75,7 +76,6 @@
 .dis{
   background: slategrey !important;
 }  
-
 /* .signup-container
 {
   background-color: #786CFF;
@@ -108,7 +108,6 @@
   height: 90%;
   padding: 40px;
 } */
-
 </style>
 </head>
 <body>
@@ -136,7 +135,6 @@
   </nav>
 <!-- <div class="container">
    <section id="formHolder">
-
       <div class="row"> -->
 
         
@@ -171,7 +169,6 @@
                      <label for="loginemail">Email Address</label>
                      <input type="email" name="email" id="loginemail">
                   </div>
-
                   <div class="form-group">
                      <label for="loginPassword">Password
                       <div id="eye1" onclick="passwordfnlog()">
@@ -182,7 +179,6 @@
                      <input type="password" name="password" id="loginPassword">
                      
                   </div>
-
                   <div class="CTA">
                      <input type="submit" value="Log In">
                      <br>
@@ -209,13 +205,11 @@
                      <input type="text" name="name" id="name" class="name" value="<%= typeof name != 'undefined' ? name : '' %>" required="true" >
                      <span class="error"></span>
                 </div>
-
                   <div class="form-group">
                      <label for="email">Email Address</label>
                      <input type="email" name="email" id="email" class="email" value="<%= typeof email != 'undefined' ? email : '' %>" onchange="validateEmail()" required="true">
                      <span class="error"></span>
                   </div>
-
                   <div class="form-group">
                      <label for="password">Password
                       <div id="eye" onclick="passwordfnsign()">
@@ -226,7 +220,6 @@
                      <input type="password" name="password" id="password" class="pass" value="<%= typeof password != 'undefined' ? password : '' %>" required="true">
                      <span class="error"></span>
                   </div>
-
                   <div class="form-group">
                      <label for="passwordCon">Confirm Password</label>
                      <input type="password" name="password2" id="passwordCon" class="passConfirm" value="<%= typeof password2 != 'undefined' ? password2 : '' %>" required="true">
@@ -253,7 +246,7 @@
         <section id="formHolder">
 
           <div class="container-left">
-            <img class="signup-logo" src="/img/signup/logo.png" alt="" srcset="">
+            <!-- <img class="signup-logo" src="/img/signup/logo.png" alt="" srcset=""> -->
             <img class="signup-illustration" src="/img/signup/form-illustration.png" alt="" srcset="">
           </div>
           <div class="container-right">
@@ -266,6 +259,7 @@
               <form class="login-form" action="/users/login" method="post">
                 <h3 id="logh3" class="heading">Get Started</h3>
                <div class="form-group">
+                 <img src="/img/email.png" alt="" srcset="">
                   <input type="email" name="email" id="loginemail" placeholder="Enter your email">
                </div>
 
@@ -274,6 +268,7 @@
                      <i id="login-hide1" class="fa fa-eye"></i>
                      <i id="login-hide2" class="fa fa-eye-slash"></i>
                    </div>
+                   <img src="/img/password.png" alt="" srcset="">
                   <input type="password" name="password" id="loginPassword" placeholder="Enter your password">
                   
                </div>
@@ -286,9 +281,9 @@
                <div class="external-links">
                 <div class="hr-sect">or login using</div>
                 <div class="social-container1">
-                 <a class="sociallinkbtn" href="/users/facebook"><img src="/img/icons/facebook.png" alt="facebook"></a>
-                 <a class="sociallinkbtn" href="/users/google"><img src="/img/icons/google.png" alt="google"></a>
-                 <a class="sociallinkbtn" href="/users/linkedin"><img src="/img/icons/linkedin.png" alt="linkedin"></a>
+                 <a href="/users/facebook" class="sociallinkbtn" ><img src="/img/icons/facebook.png" alt="facebook"></a>
+                 <a href="/users/google" class="sociallinkbtn" ><img src="/img/icons/google.png" alt="google"></a>
+                 <a href="/users/linkedin" class="sociallinkbtn" ><img src="/img/icons/linkedin.png" alt="linkedin"></a>
                </div>
                </div>
             </form>
@@ -301,11 +296,13 @@
                 <h3 id="signh3" class="heading">Create an Account</h3>
                 
                 <div class="form-group">
+                  <img src="/img/user.png" alt="" srcset="">
                   <input type="text" name="name" placeholder="Enter your name" id="name" class="name" value="<%= typeof name != 'undefined' ? name : '' %>" required="true" >
                   <span class="error"></span>
                 </div>
                 
                 <div class="form-group">
+                  <img src="/img/email.png" alt="" srcset="">
                   <input type="email" name="email" id="email" placeholder="Enter your email" class="email" value="<%= typeof email != 'undefined' ? email : '' %>" onchange="validateEmail()" required="true">
                   <span class="error"></span>
                 </div>
@@ -315,6 +312,7 @@
                     <i id="signup-hide1" class="fa fa-eye"></i>
                     <i id="signup-hide2" class="fa fa-eye-slash"></i>
                   </div>
+                  <img src="/img/password.png" alt="" srcset="">
                   <input type="password" name="password" id="password" placeholder="Enter your password" class="pass" value="<%= typeof password != 'undefined' ? password : '' %>" required="true">
                   <span class="error"></span>
                 </div>
@@ -324,6 +322,7 @@
                     <i id="signup-hide3" class="fa fa-eye"></i>
                     <i id="signup-hide4" class="fa fa-eye-slash"></i>
                   </div>
+                  <img src="/img/password.png" alt="" srcset="">
                   <input type="password" name="password2" id="passwordCon" placeholder="Enter your password again" class="passConfirm" value="<%= typeof password2 != 'undefined' ? password2 : '' %>" required="true">
                   <span class="error"></span>
                 </div> 
@@ -336,9 +335,9 @@
                   <div class="external-links">
                     <div class="hr-sect">or sign up with</div>
                     <div class="social-container1">
-                     <a class="sociallinkbtn" ><img src="/img/icons/facebook.png" alt="facebook"></a>
-                     <a class="sociallinkbtn" ><img src="/img/icons/google.png" alt="google"></a>
-                     <a class="sociallinkbtn" ><img src="/img/icons/linkedin.png" alt="linkedin"></a>
+                     <a  href="/users/facebook" class="sociallinkbtn" ><img src="/img/icons/facebook.png" alt="facebook"></a>
+                     <a  href="/users/google" class="sociallinkbtn" ><img src="/img/icons/google.png" alt="google"></a>
+                     <a  href="/users/linkedin" class="sociallinkbtn" ><img src="/img/icons/linkedin.png" alt="linkedin"></a>
                    </div>
                   </div>
                     <p style="margin-top: 14px;color:#524f4f">Already have an account? - <a href="#" class="switch" style="font-size: 13px;"><b>Login</b></a></p>
@@ -351,14 +350,10 @@
 
       <!-- </div> -->
       <!--             
-
    </section>
-
-
 </div> -->
 <!-- partial -->
   <script>
-
   function validate(email) {
     const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
@@ -366,7 +361,6 @@
 function validateEmail() {
   const email = document.getElementById('email');
   const value = email.value;
-
   if (!validate(value)) {
     email.classList.add('wrong');
     document.getElementById('sub').disabled = true;
