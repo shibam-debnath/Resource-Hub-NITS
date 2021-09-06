@@ -321,6 +321,10 @@ input.signinInput:not(:placeholder-shown){
   text-indent: 2px;
 }
 
+.show {
+  margin-bottom: 0 !important;
+}
+
 @media screen and (max-width: 1300px) {
   .container-right{
     font-size: 1.2rem; 
@@ -393,5 +397,41 @@ input.signinInput:not(:placeholder-shown){
   }
   #signupForm{
     margin-top: 0 !important;
+  }
+}
+
+@media screen and (max-width: 500px){
+  .navbar{
+    margin-bottom: 0;
+  }
+  section#formHolder{
+    margin: 0;
+    width: 100%;
+    height: calc(100vh - 114px) !important;
+    border-radius: 0;
+    box-shadow: none;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: hidden;
+  }
+  .container-right{
+    width: 100%;
+    height: 60%;
+    margin: 0;
+    border-radius: 50px 50px 0 0;
+  }
+  .container-left{
+    width: 100%;
+    height: 40%;
+  }
+
+  .container-left .signup-illustration{
+    height: 72vw;
+    width: 70vw;
+    left: 14%;
+    top: 15%;
+  }
+  .navbar{
+    z-index: 100;
   }
 }
