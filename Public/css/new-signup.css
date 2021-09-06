@@ -324,6 +324,10 @@ input.signinInput:not(:placeholder-shown){
 .show {
   margin-bottom: 0 !important;
 }
+.signup-logo{
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
 
 @media screen and (max-width: 1300px) {
   .container-right{
