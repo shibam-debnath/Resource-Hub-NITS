@@ -259,7 +259,10 @@ section#formHolder {
 .form form .CTA a.switch:hover {
   color: #f95959;
 }
-
+.signup-container
+{
+   
+}
 
 
 
@@ -566,4 +569,10 @@ video{
     font-size: 3.6vh;
     margin-top: 250px;
   }
+}
+
+.form-pic
+{
+  position: absolute;
+  left: 10%; 
 }
