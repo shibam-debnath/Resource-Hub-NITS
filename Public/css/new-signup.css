@@ -438,4 +438,7 @@ input.signinInput:not(:placeholder-shown){
   .navbar{
     z-index: 100;
   }
+  .signup-logo{
+    width: 5rem;
+  }
 }
