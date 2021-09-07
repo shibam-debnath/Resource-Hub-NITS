@@ -303,7 +303,7 @@
         <form class="login-form" action="/users/login" method="post">
           <h3 id="logh3" class="heading">Get Started</h3>
           <div class="form-group">
-            <input type="email" name="email" id="loginemail" placeholder="Enter your email">
+            <input type="email" name="email" class="loginInput" id="loginemail" placeholder="Enter your email">
           </div>
 
           <div class="form-group">
@@ -311,7 +311,7 @@
               <i id="login-hide1" class="fa fa-eye"></i>
               <i id="login-hide2" class="fa fa-eye-slash"></i>
             </div>
-            <input type="password" name="password" id="loginPassword" placeholder="Enter your password">
+            <input type="password" name="password" class="loginInput" id="loginPassword" placeholder="Enter your password">
           </div>
 
           <div class="CTA">
@@ -339,13 +339,13 @@
           <h3 id="signh3" class="heading">Create an Account</h3>
 
           <div class="form-group">
-            <input type="text" name="name" placeholder="Enter your name" id="name" class="name"
+            <input type="text" name="name" placeholder="Enter your name" id="name" class="name signinInput"
               value="<%= typeof name != 'undefined' ? name : '' %>" required="true">
             <span class="error"></span>
           </div>
 
           <div class="form-group">
-            <input type="email" name="email" id="email" placeholder="Enter your email" class="email"
+            <input type="email" name="email" id="email" placeholder="Enter your email" class="email signinInput"
               value="<%= typeof email != 'undefined' ? email : '' %>" onchange="validateEmail()" required="true">
             <span class="error"></span>
           </div>
@@ -355,7 +355,7 @@
               <i id="signup-hide1" class="fa fa-eye"></i>
               <i id="signup-hide2" class="fa fa-eye-slash"></i>
             </div>
-            <input type="password" name="password" id="password" placeholder="Enter your password" class="pass"
+            <input type="password" name="password" id="password" placeholder="Enter your password" class="pass signinInput"
               value="<%= typeof password != 'undefined' ? password : '' %>" required="true">
             <span class="error"></span>
           </div>
@@ -366,7 +366,7 @@
               <i id="signup-hide4" class="fa fa-eye-slash"></i>
             </div>
             <input type="password" name="password2" id="passwordCon" placeholder="Enter your password again"
-              class="passConfirm" value="<%= typeof password2 != 'undefined' ? password2 : '' %>" required="true">
+              class="passConfirm signinInput" value="<%= typeof password2 != 'undefined' ? password2 : '' %>" required="true">
             <span class="error"></span>
           </div>
           <p style="text-align: center; margin-top: 20px;"><input type="checkbox" id="terms" value="yes" name="terms"

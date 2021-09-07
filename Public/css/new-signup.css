@@ -280,3 +280,165 @@ form {
 .form-peice.switched {
   display: none;
 }
+
+input.loginInput,
+input.signinInput{
+  background-position: 5px;
+  background-size:contain;
+  background-repeat: no-repeat;
+  text-indent: 45px;
+}
+
+input#loginemail{
+  background-image: url("/img/icons/email.png");
+}
+
+input#loginPassword{
+  background-size: 32px;
+  background-position: 7px;
+  background-image: url("/img/icons/password.png");
+}
+
+input#password, input#passwordCon {
+  background-size: 32px;
+  background-position: 7px;
+  background-image: url("/img/icons/password.png");
+}
+
+input#name{
+  background-image: url("/img/icons/user.png");
+}
+
+input#email{
+  background-image: url("/img/icons/email.png");
+}
+
+input.loginInput:focus,
+input.signinInput:focus,
+input.loginInput:not(:placeholder-shown),
+input.signinInput:not(:placeholder-shown){
+  background-image: none !important;
+  text-indent: 2px;
+}
+
+.show {
+  margin-bottom: 0 !important;
+}
+.signup-logo{
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 1300px) {
+  .container-right{
+    font-size: 1.2rem; 
+  }
+  .heading{
+    font-size: 3rem !important;
+    margin: 3rem auto !important;
+  }
+  .form-group input{
+    height: 32px;
+  }
+  .form-peice input{
+    margin: 0 !important;
+    padding: 0.6rem 1.2rem;
+    text-indent: 35px;
+  }
+  .signup-illustration{
+    top: 25%;
+  }
+  .submit-btn{
+    text-indent: 0 !important;
+  }
+  #formHolder{
+    height: 70vh !important;
+  }
+  .sociallinkbtn img{
+    width: 3rem;
+  }
+  #terms{
+    margin-right: 1rem !important;
+  }
+}
+
+@media screen and (max-width: 900px){
+  .container-left{
+    width: 40%;
+  }
+  .container-right{
+    width: 60%;
+    font-size: 0.9rem;
+  }
+  #formHolder{
+    height: 60vh !important;
+  }
+  .signup-illustration{
+    left: 10%;
+    top: 32%;
+    height: 39vw;
+    width: 36vw;
+  }
+  .heading{
+    font-size: 2rem !important;
+    margin: 2rem auto !important;
+  }
+  .switch b{
+    font-size: 1rem;
+  }
+  .form-group input{
+    width: 80%;
+    padding: 0.4rem 1.2rem;
+  }
+  .sociallinkbtn img{
+    width: 2rem;
+  }
+  .signup-msg{
+    margin-top: -5px !important;
+  }
+  .show{
+    margin: 0;
+  }
+  #signupForm{
+    margin-top: 0 !important;
+  }
+}
+
+@media screen and (max-width: 500px){
+  .navbar{
+    margin-bottom: 0;
+  }
+  section#formHolder{
+    margin: 0;
+    width: 100%;
+    height: calc(100vh - 114px) !important;
+    border-radius: 0;
+    box-shadow: none;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: hidden;
+  }
+  .container-right{
+    width: 100%;
+    height: 60%;
+    margin: 0;
+    border-radius: 50px 50px 0 0;
+  }
+  .container-left{
+    width: 100%;
+    height: 40%;
+  }
+
+  .container-left .signup-illustration{
+    height: 72vw;
+    width: 70vw;
+    left: 14%;
+    top: 15%;
+  }
+  .navbar{
+    z-index: 100;
+  }
+  .signup-logo{
+    width: 5rem;
+  }
+}
