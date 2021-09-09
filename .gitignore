@@ -5,3 +5,4 @@ node_modules
 /config/keys_dev.js
 resource-hub.pem
 .prettierignore
+package-lock.json
