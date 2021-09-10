@@ -37,10 +37,10 @@ $(document).ready(function () {
         //Email
         if ($(this).hasClass('email')) {
             if ($(this).val().length == '') {
-                $(this).siblings('span.error').text('Please type your email address').fadeIn().parent('.form-group').addClass('hasError');
+                $(this).siblings('span.error').text('Please type your email address').fadeIn().addClass('properDisplay').parent('.form-group').addClass('hasError');
                 emailError = true;
             } else {
-                $(this).siblings('.error').text('').fadeOut().parent('.form-group').removeClass('hasError');
+                $(this).siblings('.error').text('').fadeOut().removeClass('properDisplay').parent('.form-group').removeClass('hasError');
                 emailError = false;
             }
         }
