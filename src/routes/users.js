@@ -100,7 +100,6 @@ userRouter.post('/forgotPassword/updatePassword',async(req,res)=>{
 })
 
 userRouter.post('/signup',(req,res)=>{
-    console.log("req.body ",req.body);
     const {name,email,password,password2,terms} = req.body;  
     let errors = [];
     //error handling
@@ -128,7 +127,6 @@ userRouter.post('/signup',(req,res)=>{
             password,
             password2
         })
-        // console.log("password", password);
         
         console.log("errors: ",errors);
         
