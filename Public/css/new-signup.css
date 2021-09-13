@@ -17,7 +17,7 @@ p {
   margin: 0 0 16px;
 }
 
-.sign-up
+/* .sign-up */
  
 input {
   outline: none !important;
@@ -106,12 +106,12 @@ h5{
   margin-top: 10px;
   margin-left: 20px;
 }
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
   .navbar {
     display: flex;
     justify-content: center;
     padding-bottom: 0;
-    height: 10vh;                /*navbar height is changed*/
+    height: 10vh;              
     align-items: center;
   }
   .logo{
@@ -151,7 +151,7 @@ h5{
     color: rgba(255, 255, 255, 1);
     text-decoration:none;
   }
-}
+} */
 
 /* Form styling */
 
@@ -313,33 +313,40 @@ input.loginInput,
 input.signinInput{
   background-position: 5px;
   background-size:contain;
-  background-repeat: no-repeat;
-  text-indent: 45px;
+  background-repeat: no-repeat !important;
+  text-indent: 40px;
+}
+::placeholder{
+  color: #a3a3a3; 
 }
 
 input#loginemail{
+    background-size: 20px;
+  background-position: 15px;
   background-image: url("/img/icons/email.png");
 }
 
 input#loginPassword{
-  background-size: 32px;
-  background-position: 7px;
+  background-size: 20px;
+  background-position: 15px;
   background-image: url("/img/icons/password.png");
 }
 
 input#password, input#passwordCon {
-  background-size: 32px;
-  background-position: 7px;
+  background-size: 21px;
+  background-position: 18px;
   background-image: url("/img/icons/password.png");
 }
 
 input#name{
- 
+  background-size: 25px;
+  background-position: 15px;
   background-image: url("/img/icons/user.png");
 }
 
 input#email{
- 
+  background-size: 23px;
+  background-position: 15px;
   background-image: url("/img/icons/email.png");
 }
 
@@ -358,26 +365,33 @@ input.signinInput:not(:placeholder-shown){
   margin-left: 1rem;
   margin-top: 1rem;
 }
-
+ 
 @media screen and (max-width: 1300px) {
   .container-right{
     font-size: 1.2rem; 
+    height: 550px;
+    width: 500px;
+    margin-right: 10rem;
+    margin-left: 5rem;
   }
   .heading{
     font-size: 3rem !important;
-    margin: 3rem auto !important;
+    /* margin: 3rem auto !important; */
+  }
+  p{
+    margin: 0px;
   }
   .form-group input{
     height: 32px;
   }
   .form-peice input{
-    margin: 0 !important;
+    /* margin: 5 !important; */
     padding: 0.6rem 1.2rem;
     text-indent: 35px;
-  }
+  }/*
   .signup-illustration{
     top: 25%;
-  }
+  }*/
   .submit-btn{
     text-indent: 0 !important;
   }
@@ -392,7 +406,7 @@ input.signinInput:not(:placeholder-shown){
   }
 }
 
-@media screen and (max-width: 900px){
+/* @media screen and (max-width: 900px){
   .container-left{
     width: 40%;
   }
@@ -432,9 +446,9 @@ input.signinInput:not(:placeholder-shown){
   #signupForm{
     margin-top: 0 !important;
   }
-}
+} */
 
-@media screen and (max-width: 500px){
+/* @media screen and (max-width: 500px){
   .navbar{
     margin-bottom: 0;
   }
@@ -471,4 +485,21 @@ input.signinInput:not(:placeholder-shown){
   .signup-logo{
     width: 5rem;
   }
+} */
+
+
+/* mobile view */
+
+.small-screen{
+  display: none !important;
+}
+
+@media screen and (max-width: 768px){
+  .small-screen{
+    display: block !important;
+  }
+  .big-screen{
+    display: none !important;
+  }
+
 }

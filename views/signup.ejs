@@ -137,7 +137,7 @@
       font-family: "Montserrat", sans-serif;
       font-size: 12px;
       position: absolute;
-      bottom: -16px;
+      bottom: -14px;
       left: 16%;
       display: none;
     }
@@ -287,7 +287,7 @@
   <!-- New Signup Page -->
   <!-- <div class="container"> -->
 
-  <section id="formHolder">
+  <section id="formHolder" class="big-screen">
 
     <div class="container-left">
       <a href="/"><img class="signup-logo" src="/img/signup/logo.svg" alt="" srcset=""></a>
@@ -323,9 +323,9 @@
           <div class="external-links">
             <div class="hr-sect">or login using</div>
             <div class="social-container1">
-              <a class="sociallinkbtn" href="/users/facebook"><img src="/img/icons/facebook.png" alt="facebook"></a>
-              <a class="sociallinkbtn" href="/users/google"><img src="/img/icons/google.png" alt="google"></a>
-              <a class="sociallinkbtn" href="/users/linkedin"><img src="/img/icons/linkedin.png" alt="linkedin"></a>
+              <a class="sociallinkbtn" href="/users/facebook"><img style="height: 28px;" src="/img/icons/facebook.png" alt="facebook"></a>
+              <a class="sociallinkbtn" href="/users/google"><img style="height: 28px;" src="/img/icons/google.png" alt="google"></a>
+              <a class="sociallinkbtn" href="/users/linkedin"><img style="height: 28px;" src="/img/icons/linkedin.png" alt="linkedin"></a>
             </div>
           </div>
         </form>
@@ -384,6 +384,114 @@
           <div class="external-links">
             <div style="margin-top: 10px; color:#524f4f"class="hr-sect">or sign up with</div>
             <div class="social-container1">
+              <a class="sociallinkbtn" href="/users/facebook"><img style="height: 28px;" src="/img/icons/facebook.png" alt="facebook"></a>
+              <a class="sociallinkbtn" href="/users/google"><img style="height: 28px;" src="/img/icons/google.png" alt="google"></a>
+              <a class="sociallinkbtn" href="/users/linkedin"><img style="height: 28px;" src="/img/icons/linkedin.png" alt="linkedin"></a>
+            </div>
+          </div>
+          <p style="margin-top: 14px;color:#524f4f">Already have an account? - <a href="#" class="switch"
+              style="font-size: 13px;"><b>Login</b></a></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- mobile screen -->
+
+  <section id="formHolder" class="small-screen">
+    <div class="container-top">
+      <img width="100%" src="/img/signup/illustraion-signup_login.svg" alt="" srcset="">
+    </div>
+    <div class="container-below form" style="width: 100%;background-color: white;border-top-left-radius: 45px;border-top-right-radius: 45px;margin-top: -8vh;">
+      <div class="error-scroll" id="error">
+        <%- include('./partials/messages') %>
+      </div>
+      <!-- Updated login form -->
+      <div class="login-form form-peice" style="padding: 20px 0;">
+        <form class="login-form" action="/users/login" method="post">
+          <h3 id="logh31" class="heading" style="font-size: 25px !important;">Get Started</h3>
+          <div class="form-group">
+            <input type="email" name="email" class="loginInput" id="loginemail" placeholder="Enter your email">
+          </div>
+
+          <div class="form-group">
+            <div id="eye3" onclick="passwordfnsign3()">
+              <i id="login-hide1" class="fa fa-eye"></i>
+              <i id="login-hide2" class="fa fa-eye-slash"></i>
+            </div>
+            <input type="password" name="password" class="loginInput" id="loginPassword" placeholder="Enter your password">
+          </div>
+
+          <div class="CTA">
+            <input type="submit" value="Log In" class="submit-btn">
+            <br>
+            <p style="margin-top: 4vh;color: #524f4f;">Don't have an account? - <a href="#" class="switch"
+                style="font-size: 13px;"><b>Sign Up</b></a></p>
+          </div>
+          <div class="external-links">
+            <div class="hr-sect">or login using</div>
+            <div class="social-container1">
+              <a class="sociallinkbtn" href="/users/facebook"><img src="/img/icons/facebook.png" alt="facebook"></a>
+              <a class="sociallinkbtn" href="/users/google"><img src="/img/icons/google.png" alt="google"></a>
+              <a class="sociallinkbtn" href="/users/linkedin"><img src="/img/icons/linkedin.png" alt="linkedin"></a>
+            </div>
+          </div>
+        </form>
+        <p style="text-align: center;"><a href="/users/forgotPassword"><b>Forgot Password ?</b></a></p>
+      </div>
+
+      <!-- Updated signup form -->
+      <div class="signup-form form-peice switched" style="padding: 20px 0;">
+        <form class="signup-form" id="signupForm" action="/users/signup" method="post"
+          style="margin-top: 12px;">
+          <h3 id="signh3" class="heading" style="font-size: 25px !important;">Create an Account</h3>
+ 
+ 
+          <div style="margin-bottom: 10px;" class="form-group">
+            <input   type="text" name="name"  placeholder="Enter your name" id="name" class="name signinInput" 
+              value="<%= typeof name != 'undefined' ? name : '' %>" required="true">
+            <span class="error"></span>
+          </div>
+
+ 
+ 
+          <div style="margin-bottom: 10px;" class="form-group">
+            <input type="email" name="email" id="email" placeholder="Enter your email" class="email signinInput"
+ 
+              value="<%= typeof email != 'undefined' ? email : '' %>" onchange="validateEmail()" required="true">
+            <span class="error"></span>
+          </div>
+
+          <div style="margin-bottom: 10px;" class="form-group password-input">
+            <div id="eye" onclick="passwordfnsign()">
+              <i id="signup-hide1" class="fa fa-eye"></i>
+              <i id="signup-hide2" class="fa fa-eye-slash"></i>
+            </div>
+            <input type="password" name="password" id="password" placeholder="Enter your password" class="pass signinInput"
+              value="<%= typeof password != 'undefined' ? password : '' %>" required="true">
+            <span class="error"></span>
+          </div>
+
+          <div style="margin-bottom: 10px;" class="form-group password-input">
+            <div id="eye2" onclick="passwordfnsign2()">
+              <i id="signup-hide3" class="fa fa-eye"></i>
+              <i id="signup-hide4" class="fa fa-eye-slash"></i>
+            </div>
+            <input type="password" name="password2" id="passwordCon" placeholder="Enter your password again"
+              class="passConfirm signinInput" value="<%= typeof password2 != 'undefined' ? password2 : '' %>" required="true">
+            <span class="error"></span>
+          </div>
+          <p style="text-align: center; margin-top: 20px;"><input type="checkbox" id="terms" value="yes" name="terms"
+              style="margin-right: 1rem;">I agree to the <a href="../terms.html" target="_blank">Terms and
+              Conditions</a></p>
+
+          <div class="CTA">
+            <input type="submit" id="sub" class="submit-btn" value="Sign Up">
+            <br>
+          </div>
+          <div class="external-links">
+            <div style="margin-top: 10px; color:#524f4f"class="hr-sect">or sign up with</div>
+            <div class="social-container1">
               <a class="sociallinkbtn" href="/users/facebook"><img src="/img/icons/facebook.png" alt="facebook"></a>
               <a class="sociallinkbtn" href="/users/google"><img src="/img/icons/google.png" alt="google"></a>
               <a class="sociallinkbtn" href="/users/linkedin"><img src="/img/icons/linkedin.png" alt="linkedin"></a>
@@ -393,11 +501,8 @@
               style="font-size: 13px;"><b>Login</b></a></p>
         </form>
       </div>
-
     </div>
-
   </section>
-
   <!-- </div> -->
   <!--             
 
