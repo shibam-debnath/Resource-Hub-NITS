@@ -76,8 +76,10 @@ $(document).ready(function () {
 
     // form switch
     $('a.switch').click(function (e) {
+        e.preventDefault()
+        $(this).parents('.box-card').toggleClass('flipped');
+
         $(this).toggleClass('active');
-        e.preventDefault();
 
         if ($('a.switch').hasClass('active')) {
             $(this).parents('.form-peice').addClass('switched').siblings('.form-peice').removeClass('switched');

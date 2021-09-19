@@ -2164,11 +2164,12 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   width: 60px;
   height: 60px;
-  background: #FF4800;
+  /* background: #FF4800; */
   border-radius: 50%;
   transition: all 1s;
   z-index: 4;
-  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
+  /* box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4); */
+  z-index: -1;
 }
 .searchcontainer .search:hover {
   cursor: pointer;
@@ -2183,12 +2184,12 @@ h1, h2, h3, h4, h5, h6 {
   left: 22px;
   width: 12px;
   height: 2px;
-  background: white;
-  transform: rotate(45deg);
+  /* background: white; */
+  /* transform: rotate(45deg); */
   transition: all 0.5s;
 }
 .searchcontainer .search::after {
-  content: "";
+  /* content: ""; */
   position: absolute;
   margin: auto;
   top: -5px;
@@ -2235,7 +2236,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .searchcontainer input:focus ~ .search {
   right: -250px;
-  background: #151515;
+  /* background: #151515; */
   z-index: 6;
 }
 .searchcontainer input:focus ~ .search::before {
