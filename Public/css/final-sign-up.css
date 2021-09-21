@@ -290,3 +290,38 @@ transform: rotateY( 180deg );
     text-indent: 0 !important;
   }
 }
+
+
+/* spash message */
+
+.error-scroll .alert{
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.error-scroll .button{
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.error-scroll button{
+  border-style: none;
+  background: transparent;
+}
+
+.alert{
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-top-right-radius: 45px;
+  border-top-left-radius: 45px;
+  padding: 1rem !important;
+  padding-left: 1.2rem !important;
+}
+
+@media screen and (max-width: 768px){
+  .alert{
+    padding: .6rem 2rem !important;
+  }
+  
+}
