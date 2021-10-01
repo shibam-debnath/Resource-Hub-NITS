@@ -294,18 +294,15 @@ transform: rotateY( 180deg );
 
 /* spash message */
 
-.error-scroll .alert{
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.error-scroll .button{
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
 .error-scroll button{
   border-style: none;
   background: transparent;
+}
+
+#error{
+  backface-visibility: hidden !important;
+  -webkit-backface-visibility: hidden !important;
+  transform: rotateY(0deg) !important;
 }
 
 .alert{
