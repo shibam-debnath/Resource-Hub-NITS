@@ -120,6 +120,13 @@ margin: 1rem 1rem;
 
 /* Eye */
 
+/* default eye */
+input[type=password]::-ms-reveal,
+input[type=password]::-ms-clear
+{
+    display: none;
+}
+
 #eye1{
 float: right;
 margin-left: 245px;
