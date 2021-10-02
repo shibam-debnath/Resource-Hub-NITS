@@ -102,6 +102,7 @@
 @media (max-width : 1492px){
     .container{
         margin:3% auto;
+        margin-top: 75px;
         width: 90%;
     }
 }
@@ -116,7 +117,7 @@
 
 @media (max-width : 952px) {
     .container{
-        margin:3% auto;
+        margin:10% auto;
         width: 90%;
     }
     .card{
@@ -131,10 +132,12 @@
 }
 
 
+
 @media  screen and (max-width : 770px) {
 
     .container{
         width: 95%;
+        margin-top: 120px;
     }
     .details p{
         font-size: 12px;
