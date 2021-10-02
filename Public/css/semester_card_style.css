@@ -102,7 +102,10 @@
 @media (max-width : 1492px){
     .container{
         margin:3% auto;
+<<<<<<< HEAD
         margin-top: 75px;
+=======
+>>>>>>> 352d21d8440aa662ea1e51acf403a97df49d6b00
         width: 90%;
     }
 }
@@ -117,7 +120,11 @@
 
 @media (max-width : 952px) {
     .container{
+<<<<<<< HEAD
         margin:10% auto;
+=======
+        margin:3% auto;
+>>>>>>> 352d21d8440aa662ea1e51acf403a97df49d6b00
         width: 90%;
     }
     .card{
@@ -132,12 +139,18 @@
 }
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 352d21d8440aa662ea1e51acf403a97df49d6b00
 @media  screen and (max-width : 770px) {
 
     .container{
         width: 95%;
+<<<<<<< HEAD
         margin-top: 120px;
+=======
+>>>>>>> 352d21d8440aa662ea1e51acf403a97df49d6b00
     }
     .details p{
         font-size: 12px;
