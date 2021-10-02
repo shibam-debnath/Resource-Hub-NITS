@@ -4,3 +4,5 @@ node_modules
 /Public/issue/
 /config/keys_dev.js
 resource-hub.pem
+.prettierignore
+package-lock.json

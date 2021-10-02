@@ -100,7 +100,6 @@ userRouter.post('/forgotPassword/updatePassword',async(req,res)=>{
 })
 
 userRouter.post('/signup',(req,res)=>{
-    console.log("req.body ",req.body);
     const {name,email,password,password2,terms} = req.body;  
     let errors = [];
     //error handling
@@ -128,7 +127,6 @@ userRouter.post('/signup',(req,res)=>{
             password,
             password2
         })
-        // console.log("password", password);
         
         console.log("errors: ",errors);
         
@@ -162,13 +160,14 @@ userRouter.post('/signup',(req,res)=>{
                             newUser.save()
                                 .then(user => {
                                 console.log("New user: ",user);
-                                confirmUser({
-                                    name:user.name,
-                                    email:user.email,
-                                    id:user._id,
-                                    token:user.token
-                                })
-                                req.flash('success_msg','Successfuly registered, verify your account at email');
+                                // TODO: Remove verification of account
+                                // confirmUser({
+                                //     name:user.name,
+                                //     email:user.email,
+                                //     id:user._id,
+                                //     token:user.token
+                                // })
+                                req.flash('success_msg','Successfuly registered, please login!');
                                 //req.flash('success_msg', 'You are now registered and can log in');   
                                 //to display the flash message we will use messages.ejs in partials
                                 
@@ -234,6 +233,7 @@ userRouter.get('/facebook/callback', passport.authenticate("facebook", {
     failureRedirect: "/users/signup"
   }));
 
+// linkedin login
 
   userRouter.get('/linkedin',
   passport.authenticate('linkedin')

@@ -1,6 +1,6 @@
 body {
   font-family: "Montserrat", sans-serif;
-  background: #f7edd5;
+  background: #786CFF;
 }
 
 .container {
@@ -259,7 +259,10 @@ section#formHolder {
 .form form .CTA a.switch:hover {
   color: #f95959;
 }
-
+.signup-container
+{
+   
+}
 
 
 
@@ -382,7 +385,7 @@ section#formHolder {
 .nav-links,
 .logo {
   color: #ffffff;
-    padding: 40px 20px;
+    /* padding: 40px 20px; */
     font-family: "Barlow Semi Condensed", sans-serif;
     text-transform: uppercase;
     line-height: 12px;
@@ -396,8 +399,8 @@ section#formHolder {
     /* justify-content: center; */
 }
 .main-nav li {
-  /*text-align: center;
-  margin: 15px auto;*/
+   text-align: center;
+  /* margin: 15px auto;*/ 
 }
 .navbar-toggle {
   position: absolute;
@@ -439,7 +442,7 @@ section#formHolder {
   }
 
   .main-nav {
-    display: flex;
+    display: flex; 
     margin-right: 30px;
     flex-direction: row;
     justify-content: flex-end;
@@ -566,4 +569,10 @@ video{
     font-size: 3.6vh;
     margin-top: 250px;
   }
+}
+
+.form-pic
+{
+  position: absolute;
+  left: 10%; 
 }
