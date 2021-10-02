@@ -329,3 +329,12 @@ transform: rotateY( 180deg );
   }
   
 }
+
+/* logo */
+
+.logo{
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: 6rem;
+}
