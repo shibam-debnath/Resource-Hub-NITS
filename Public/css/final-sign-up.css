@@ -262,6 +262,14 @@ display: none !important;
     margin-top: 3rem;
   }
 
+  /*signup page mobile view*/
+  .signup-form{
+    margin: 30% 0px;
+  }
+  .CTA{
+    margin-top: 20px;
+  }
+
 }
 
 /* /////// Card-Flip///////// */
