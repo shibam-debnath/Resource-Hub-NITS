@@ -120,6 +120,13 @@ margin: 1rem 1rem;
 
 /* Eye */
 
+/* default eye */
+input[type=password]::-ms-reveal,
+input[type=password]::-ms-clear
+{
+    display: none;
+}
+
 #eye1{
 float: right;
 margin-left: 245px;
@@ -289,4 +296,45 @@ transform: rotateY( 180deg );
   .submit-btn{
     text-indent: 0 !important;
   }
+}
+
+
+/* spash message */
+
+.error-scroll button{
+  border-style: none;
+  background: transparent;
+}
+
+#error{
+  backface-visibility: hidden !important;
+  -webkit-backface-visibility: hidden !important;
+  transform: rotateY(0deg) !important;
+}
+
+.alert{
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-top-right-radius: 45px;
+  border-top-left-radius: 45px;
+  padding: 1rem !important;
+  padding-left: 1.2rem !important;
+}
+
+@media screen and (max-width: 768px){
+  .alert{
+    padding: .6rem 2rem !important;
+  }
+  
+}
+
+/* logo */
+
+.logo{
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: 6rem;
 }

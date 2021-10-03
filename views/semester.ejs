@@ -170,9 +170,9 @@
         <% var count = 1 %>
     <div class="container">
         <div class="row">
-            <% notes.forEach((note) => { %>
+            <% notes.forEach((note, i) => { %>
             <div class="card">
-                <img class="sem_img" src="/img/Frame 1 (1).png">
+                <img class="sem_img" src="/img/semester/<%= i+1 %>.png">
                 <div class="details">
                     <h2>Semester <%= count%></h2>
                     <div class="details-body">
