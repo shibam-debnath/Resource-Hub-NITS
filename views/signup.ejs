@@ -237,7 +237,7 @@
 
   <section id="formHolder" class="small-screen">
     <div class="container-top">
-      <img width="100%" src="/img/signup/illustraion-signup_login.svg" alt="" srcset="">
+      <img class="svg" width="100%" src="/img/signup/illustraion-signup_login.svg" alt="" srcset="">
     </div>
     <div class="container-below form"
       style="width: 100%;background-color: white;border-top-left-radius: 45px;border-top-right-radius: 45px;margin-top: -8vh;">
@@ -247,8 +247,8 @@
         <div class="error-scroll" id="error">
           <%- include('./partials/messages') %>
         </div>
-        <form class="login-form" action="/users/login" method="post" style="padding: 20px 0;">
-          <h3 id="logh31" class="heading" style="font-size: 2rem !important;margin-top: 2rem;">Get Started</h3>
+        <form class="login-form-2" action="/users/login" method="post">
+          <h3 id="logh31" class="heading" style="font-size: 3rem !important; margin-bottom: 40px;">Get Started</h3>
           <div class="form-group">
             <input type="email" name="email" class="loginInput" id="loginemail" placeholder="Enter your email">
           </div>
@@ -281,9 +281,9 @@
       </div>
 
       <!-- Updated signup form -->
-      <div class="signup-form form-peice switched" style="padding: 20px 0;">
+      <div class="signup-form form-peice switched">
         <form class="signup-form" id="signupForm" action="/users/signup" method="post" style="margin-top: 12px;">
-          <h3 id="signh3" class="heading"  style="font-size: 2rem !important;margin-top: 1.5rem;">Create an Account</h3>
+          <h3 id="signh3" class="heading"  style="font-size: 3rem !important; margin-bottom: 40px;">Create an Account</h3>
 
 
           <div style="margin-bottom: 10px;" class="form-group">

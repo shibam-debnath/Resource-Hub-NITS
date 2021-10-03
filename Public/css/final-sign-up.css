@@ -242,6 +242,33 @@ display: none !important;
   .form-peice.switched {
     display: none;
   } 
+  .svg{
+    display: none;
+  }
+  .login-form{
+    margin: 40% 0px;
+  }
+  .login-form-2{
+    margin: 20px 0px;
+  }
+  body{
+    background-color: white!important;
+    height: 70vh!important;
+  }
+  .sociallinkbtn {
+    margin: 60px 10px;
+  }
+  .hr-sect{
+    margin-top: 3rem;
+  }
+
+  /*signup page mobile view*/
+  .signup-form{
+    margin: 30% 0px;
+  }
+  .CTA{
+    margin-top: 20px;
+  }
 
 }
 
