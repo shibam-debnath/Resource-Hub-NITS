@@ -160,6 +160,7 @@
     color: rgba(30, 48, 86, 0.8);
     line-height: 30px;
     font-size: 1.1rem;
+    font-family: "Barlow Semi Condensed", sans-serif;
 }
 @media screen and (max-width:768px){
     .faq .accordion .card .card-header h5 button {

@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Signup/Login | Resource Hub</title>
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway:300,600" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:300,400,500,600,700|Rajdhani:400,500,600,700&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'> -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -29,7 +29,7 @@
     body {
       height: 100vh;
       background-color: #562fc7;
-      font-family: "Montserrat", sans-serif;
+      font-family: "Barlow Semi Condensed", sans-serif;
     }
     .nav-images
     {
@@ -294,7 +294,7 @@
 
 
 
-          <div style="margin-bottom: 10px;" class="form-group">
+          <div style="margin-bottom: 10px;padding: 45px;" class="form-group">
             <input type="email" name="email" id="email" placeholder="Enter your email" class="email signinInput"
               value="<%= typeof email != 'undefined' ? email : '' %>" onchange="validateEmail()" required="true">
             <span class="error"></span>

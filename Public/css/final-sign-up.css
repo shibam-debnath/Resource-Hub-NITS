@@ -1,5 +1,6 @@
 /* .sign-up */
 
+@import url("https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:300,400,500,600,700|Rajdhani:400,500,600,700&display=swap");
 input {
 outline: none !important;
 }
@@ -216,6 +217,8 @@ input.loginInput:not(:placeholder-shown),
 input.signinInput:not(:placeholder-shown){
 background-image: none !important;
 text-indent: 2px;
+padding-left: 15px;
+color: black !important;
 }
 
 .show {
@@ -254,6 +257,7 @@ display: none !important;
   body{
     background-color: white!important;
     height: 70vh!important;
+    font-family: "Barlow Semi Condensed", sans-serif;
   }
   .sociallinkbtn {
     margin: 60px 10px;

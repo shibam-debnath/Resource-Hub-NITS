@@ -1,7 +1,7 @@
 /* General styling */
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Barlow Semi Condensed", sans-serif;
   background-color: #562fc7;
 }
 
@@ -308,13 +308,18 @@ form {
 .form-peice.switched {
   display: none;
 }
-
+.signinInput
+{
+  padding: 45px;
+  padding-left: 45px;
+}
 input.loginInput,
 input.signinInput{
   background-position: 5px;
   background-size:contain;
   background-repeat: no-repeat !important;
   text-indent: 40px;
+  padding: 10px;
 }
 ::placeholder{
   color: #a3a3a3; 
@@ -324,18 +329,21 @@ input#loginemail{
     background-size: 20px;
   background-position: 15px;
   background-image: url("/img/icons/email.png");
+  padding: 45px;
 }
 
 input#loginPassword{
   background-size: 20px;
   background-position: 15px;
   background-image: url("/img/icons/password.png");
+  padding: 45px;
 }
 
 input#password, input#passwordCon {
   background-size: 21px;
   background-position: 18px;
   background-image: url("/img/icons/password.png");
+  padding-left: 45px;
 }
 
 input#name{
@@ -383,6 +391,7 @@ input.signinInput:not(:placeholder-shown){
   }
   .form-group input{
     height: 32px;
+    padding: 45px;
   }
   .form-peice input{
     /* margin: 5 !important; */
