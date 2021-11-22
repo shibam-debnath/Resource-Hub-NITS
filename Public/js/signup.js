@@ -6,7 +6,8 @@ $(document).ready(function () {
     var usernameError = true,
         emailError    = true,
         passwordError = true,
-        passConfirm   = true;
+        passConfirm   = true,
+        checked = false;
 
     // Detect browser for css purpose
     if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
@@ -19,6 +20,8 @@ $(document).ready(function () {
         $(this).siblings('label').addClass('active');
     })
     //Form validation
+
+    $(".signup-form .submit-btn").css("background-color", "var(--bs-secondary)");
     $('input').blur(function () {
 
         //User Name
@@ -88,12 +91,21 @@ $(document).ready(function () {
         }
     });
 
-
+    // terms & condition 
+    $("input[type=checkbox]").change(function() {
+        if(this.checked) {
+            $(".signup-form .submit-btn").css("background-color", "#FF842B");
+            checked = true
+        }
+        else{
+            $(".signup-form .submit-btn").css("background-color", "var(--bs-secondary)");   
+            checked = false    
+        }
+    });
     // Form submit
     $('form.signup-form').submit(function (event) {
         console.log("I m here")
-
-        if (usernameError == true || emailError == true || passwordError == true || passConfirm == true) {
+        if (usernameError == true || emailError == true || passwordError == true || passConfirm == true || checked == false) {
             event.preventDefault();
             $('.name, .email, .pass, .passConfirm').blur();
         } else {
