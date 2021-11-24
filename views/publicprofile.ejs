@@ -345,7 +345,7 @@
                 <div class="col s6">
                   <p class="collections-title"><span>Subject - <%= note.subject%></span><span style="margin-left: 2vw;">Branch - <%= note.branch%></span> <span style="margin-left: 1.6vw;">Semester - <%= note.semester%></span> </p>
                   <p class="collections-content">Professor Name - <%= note.profName%></p>
-                  <a href="/users/branch/semester/notes/download?branch=<%= note.branch %>&semester=<%= note.semester %>&noteId=<%= note._id%>" class="collections-title">Click here to view / download the note</a>
+                  <a target="_blank" href="/users/branch/semester/notes/download?branch=<%= note.branch %>&semester=<%= note.semester %>&noteId=<%= note._id%>" class="collections-title">Click here to view / download the note</a>
                 </div>
                 <div class="col s2" style="margin-top: 7vh;">
                   <span class="task-cat pink accent-2"><%= floorvalue[countNote]%></span>

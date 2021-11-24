@@ -237,6 +237,7 @@
 
   <section id="formHolder" class="small-screen">
     <div class="container-top">
+      <a href="/"><img src="/img/signup/logo.svg" class="logo" alt="" srcset=""></a>
       <img class="svg" width="100%" src="/img/signup/illustraion-signup_login.svg" alt="" srcset="">
     </div>
     <div class="container-below form"
@@ -294,7 +295,7 @@
 
 
 
-          <div style="margin-bottom: 10px;padding: 45px;" class="form-group">
+          <div style="margin-bottom: 10px;" class="form-group">
             <input type="email" name="email" id="email" placeholder="Enter your email" class="email signinInput"
               value="<%= typeof email != 'undefined' ? email : '' %>" onchange="validateEmail()" required="true">
             <span class="error"></span>
