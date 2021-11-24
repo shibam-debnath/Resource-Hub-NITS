@@ -453,7 +453,6 @@ figcaption a {
     .logo{
     display: inline-block;
       position: relative;
-      left: -10%;
       font-size: 2rem;
     }
     /* #chkToggle:checked + ul.main-nav {
@@ -515,16 +514,18 @@ figcaption a {
   }
   
   .grid-footer {
-    display: grid;
-    grid-template-columns: auto auto auto auto auto;
+    /* display: grid;
+    grid-template-columns: auto auto auto auto auto; */
+    display: flex;
+    justify-content: space-evenly;
     padding: 30px;
     margin: auto;
   }
 
   @media only screen and (max-width : 1150px){
     .grid-footer {
-        display: grid;
-        grid-template-columns: auto auto auto auto;
+        /* display: grid;
+        grid-template-columns: auto auto auto auto; */
         padding: 30px;
         margin: auto;
     }
@@ -532,16 +533,16 @@ figcaption a {
 
 @media only screen and (max-width : 950px){
     .grid-footer {
-        display: grid;
-        grid-template-columns: auto auto auto;
+        /* display: grid;
+        grid-template-columns: auto auto auto; */
         padding: 30px;
         margin: auto;
     }
 }
 @media only screen and (max-width : 600px){
     .grid-footer {
-        display: grid;
-        grid-template-columns: auto auto;
+        /* display: grid;
+        grid-template-columns: auto auto; */
         padding: 15px;
         margin: auto;
     }
@@ -549,8 +550,8 @@ figcaption a {
 
 @media only screen and (max-width : 570px){
     .grid-footer {
-        display: grid;
-        grid-template-columns: auto;
+        /* display: grid;
+        grid-template-columns: auto; */
         padding: 15px;
         margin: auto;
     }

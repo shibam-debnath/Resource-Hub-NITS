@@ -435,7 +435,6 @@ section#formHolder {
   .logo{
   display: inline-block;
     position: relative;
-        left: -8%;
 }
   #chkToggle:checked + ul.main-nav {
     display: flex;
