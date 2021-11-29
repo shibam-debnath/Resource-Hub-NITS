@@ -920,7 +920,7 @@ input {
     <!--::footer_part start::-->
     <footer class="footer_part">
         <div class="container">
-            <div class="row">
+            <div class="row" style="justify-content: center;">
                 <div class="col-sm-4 col-md-4 col-lg-3">
                     <div class="single_footer_part">
                         <h4>Developers</h4>
@@ -932,36 +932,42 @@ input {
                         </ul>
                     </div>
                 </div>
-                <div class="col-sm-4 col-md-4 col-lg-2">
-                    <div class="single_footer_part">
-                        <h4>Popular Notes</h4>
-                        <ul class="list-unstyled">
-                            <% popularNotes.forEach((note) => { %>
+                <% if (popularNotes.length) { %>
+                    <div class="col-sm-4 col-md-4 col-lg-2">
+                        <div class="single_footer_part">
+                            <h4>Popular Notes</h4>
+                            <ul class="list-unstyled">
+                                <% popularNotes.forEach((note) => { %>
+                                    <li style="overflow:hidden; max-height: 30px;"><a href="/users/branch/semester/notes?branch=<%= note.branch %>&semester=<%= note.semester %>"><%= note.subject %>,<%= note.semester %>,<%= note.branch %></a></li>
+                                <% }); %>
+                            </ul>
+                        </div>
+                    </div>
+                <% } %>
+                <% if (recentNotes.length) { %>
+                    <div class="col-sm-4 col-md-4 col-lg-2">
+                        <div class="single_footer_part">
+                            <h4>Recent Uploads</h4>
+                            <ul class="list-unstyled">
+                                <% recentNotes.forEach((note) => { %>
                                 <li style="overflow:hidden; max-height: 30px;"><a href="/users/branch/semester/notes?branch=<%= note.branch %>&semester=<%= note.semester %>"><%= note.subject %>,<%= note.semester %>,<%= note.branch %></a></li>
-                            <% }); %>
-                        </ul>
+                                <% }); %>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="col-sm-4 col-md-4 col-lg-2">
-                    <div class="single_footer_part">
-                        <h4>Recent Uploads</h4>
-                        <ul class="list-unstyled">
-                            <% recentNotes.forEach((note) => { %>
-                            <li style="overflow:hidden; max-height: 30px;"><a href="/users/branch/semester/notes?branch=<%= note.branch %>&semester=<%= note.semester %>"><%= note.subject %>,<%= note.semester %>,<%= note.branch %></a></li>
-                            <% }); %>
-                        </ul>
+                <% } %>
+                <% if (mostDownloaded.length) { %>
+                    <div class="col-sm-4 col-md-4 col-lg-2">
+                        <div class="single_footer_part">
+                            <h4>Most Downloaded</h4>
+                            <ul class="list-unstyled">
+                                <% mostDownloaded.forEach((note) => { %> 
+                                <li style="overflow:hidden; max-height: 30px;"><a href="/users/branch/semester/notes?branch=<%= note.branch %>&semester=<%= note.semester %>"><%= note.subject %> <%= note.semester %> <%= note.branch %></a></li>
+                                <% }); %>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="col-sm-4 col-md-4 col-lg-2">
-                    <div class="single_footer_part">
-                        <h4>Most Downloaded</h4>
-                        <ul class="list-unstyled">
-                            <% mostDownloaded.forEach((note) => { %> 
-                            <li style="overflow:hidden; max-height: 30px;"><a href="/users/branch/semester/notes?branch=<%= note.branch %>&semester=<%= note.semester %>"><%= note.subject %> <%= note.semester %> <%= note.branch %></a></li>
-                            <% }); %>
-                        </ul>
-                    </div>
-                </div>
+                <% } %>
                 <div class="col-sm-4 col-md-3 col-lg-3">
                     <div class="single_footer_part">
                         <h4>Popular Profiles</h4>

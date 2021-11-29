@@ -553,7 +553,6 @@ body::-webkit-scrollbar-thumb {
     .logo{
     display: inline-block;
       position: relative;
-      left: -10%;
       font-size: 2rem;
     }
     /* #chkToggle:checked + ul.main-nav {
@@ -669,16 +668,18 @@ body::-webkit-scrollbar-thumb {
   }
   
   .grid-footer {
-    display: grid;
-    grid-template-columns: auto auto auto auto auto;
+    /* display: grid;
+    grid-template-columns: auto auto auto auto auto; */
+    display: flex;
+    justify-content: space-evenly;
     padding: 30px;
     margin: auto;
   }
 
   @media only screen and (max-width : 1150px){
     .grid-footer {
-        display: grid;
-        grid-template-columns: auto auto auto auto;
+        /* display: grid;
+        grid-template-columns: auto auto auto auto; */
         padding: 30px;
         margin: auto;
     }
@@ -686,16 +687,16 @@ body::-webkit-scrollbar-thumb {
 
 @media only screen and (max-width : 950px){
     .grid-footer {
-        display: grid;
-        grid-template-columns: auto auto auto;
+        /* display: grid;
+        grid-template-columns: auto auto auto; */
         padding: 30px;
         margin: auto;
     }
 }
 @media only screen and (max-width : 600px){
     .grid-footer {
-        display: grid;
-        grid-template-columns: auto auto;
+        /* display: grid;
+        grid-template-columns: auto auto; */
         padding: 15px;
         margin: auto;
     }
@@ -703,8 +704,8 @@ body::-webkit-scrollbar-thumb {
 
 @media only screen and (max-width : 570px){
     .grid-footer {
-        display: grid;
-        grid-template-columns: auto;
+        /* display: grid;
+        grid-template-columns: auto; */
         padding: 15px;
         margin: auto;
     }
@@ -770,11 +771,11 @@ body::-webkit-scrollbar-thumb {
   
   
   
-  @media (max-width: 576px) {
+  /* @media (max-width: 576px) {
    
       margin-bottom: 20px;
     }
-  }
+  } */
   
   @media only screen and (min-width: 576px) and (max-width: 767px) {
     
@@ -934,7 +935,6 @@ body::-webkit-scrollbar-thumb {
   }
   
   @media (max-width: 576px) {
-    ]
     .footer_part .footer_icon {
       float: left;
       margin-top: 15px;

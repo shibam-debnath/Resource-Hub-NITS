@@ -148,7 +148,6 @@
 .logout1{
     color:black;
     position:relative;
-    left:10vw;
     font-weight:700;
 }
 .logo,.nav-links{
@@ -602,7 +601,7 @@ progress::-moz-progress-value{
                   <p class="collections-title"><span>Subject - <%= note.subject%></span><span style="margin-left: 2vw;">Branch - <%= note.branch%></span> <span style="margin-left: 1.6vw;">Semester - <%= note.semester%></span> </p>
                   <p class="collections-content">Professor Name - <%= note.profName%></p>
                   <p class="collections-content">Year - <%= note.year%> <span style="margin-left: 1.6vw;">Type - <%= note.noteType%></span></p>
-                  <a href="<%= note.notesLoc %>" class="collections-title">Click here to view / download the note</a>
+                  <a target="_blank" href="<%= note.notesLoc %>" class="collections-title">Click here to view / download the note</a>
                 </div>
                 <div class="col s2" style="margin-top: 7vh;">
                   <span class="task-cat pink accent-2"><%= floorvalue[countNote]%></span>

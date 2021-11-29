@@ -5,7 +5,7 @@
   background-image: linear-gradient(to left, #fff 0%, #fff 51%, #fff 100%);
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -19,17 +19,15 @@ body {
   font-size: 14px;
 }
 
-
-
 #resource_hub {
   font-size: 4rem;
-  text-align:center;
+  text-align: center;
 }
-@media screen and (min-width: 768px){
-  #resource_hub{
-    font-size:6rem;
+@media screen and (min-width: 768px) {
+  #resource_hub {
+    font-size: 6rem;
     white-space: nowrap;
-    text-align:left;
+    text-align: left;
   }
 }
 
@@ -39,7 +37,9 @@ body {
 }
 
 /* line 12, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_common.scss */
-input:hover, input:focus, .form-control:focus {
+input:hover,
+input:focus,
+.form-control:focus {
   outline: none !important;
   box-shadow: 0 0 0 0.2rem transparent;
   border: 1px solid #eaecee;
@@ -97,7 +97,12 @@ a:hover {
 }
 
 /* line 90, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_common.scss */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: #182028;
   font-family: "Barlow Semi Condensed", sans-serif;
 }
@@ -162,7 +167,10 @@ img {
 }
 
 /* line 136, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_common.scss */
-a:focus, .button:focus, button:focus, .btn:focus {
+a:focus,
+.button:focus,
+button:focus,
+.btn:focus {
   text-decoration: none;
   outline: none;
   box-shadow: none;
@@ -371,7 +379,7 @@ ul {
   backface-visibility: hidden;
   animation: jumping 9s ease-in-out 2s infinite alternate;
   animation-delay: 1s;
-  transition: all .9s ease 5s;
+  transition: all 0.9s ease 5s;
   user-select: none;
 }
 
@@ -423,65 +431,65 @@ ul {
 @keyframes jumping {
   0% {
     transform: translateY(0px) translateX(0) rotate(0) scale(1);
-    opacity: .8;
+    opacity: 0.8;
   }
   25% {
     transform: translateY(-10px) translateX(-10px) rotate(20deg) scale(0.8);
-    opacity: .9;
+    opacity: 0.9;
   }
   50% {
     transform: translateY(-15px) translateX(-15px) rotate(10deg) scale(0.9);
-    opacity: .8;
+    opacity: 0.8;
   }
   75% {
     transform: translateY(-20px) translateX(-20px) rotate(20deg) scale(0.75);
-    opacity: .6;
+    opacity: 0.6;
   }
   85% {
     transform: translateY(-25px) translateX(-25px) rotate(20deg) scale(0.9);
-    opacity: .7;
+    opacity: 0.7;
   }
   100% {
     transform: translateY(-15px) translateX(-15px) rotate(0) scale(0.95);
-    opacity: .85;
+    opacity: 0.85;
   }
 }
 
 @keyframes jumping2 {
   0% {
     transform: translateY(0px) translateX(0) rotate(0) scale(1);
-    opacity: .5;
+    opacity: 0.5;
   }
   25% {
     transform: translateY(-30px) translateX(10px) rotate(20deg) scale(0.8);
-    opacity: .8;
+    opacity: 0.8;
   }
   50% {
     transform: translateY(15px) translateX(-15px) rotate(10deg) scale(0.7);
-    opacity: .8;
+    opacity: 0.8;
   }
   75% {
     transform: translateY(30px) translateX(20px) rotate(90deg) scale(0.75);
-    opacity: .7;
+    opacity: 0.7;
   }
   100% {
     transform: translateY(-15px) translateX(15px) rotate(0) scale(0.75);
-    opacity: .9;
+    opacity: 0.9;
   }
 }
 
 @keyframes jumping3 {
   0% {
     transform: translateY(10px) translateX(0) rotate(0) scale(1);
-    opacity: .9;
+    opacity: 0.9;
   }
   20% {
     transform: translateY(20px) translateX(10px) rotate(-20deg) scale(0.8);
-    opacity: .8;
+    opacity: 0.8;
   }
   40% {
     transform: translateY(15px) translateX(-15px) rotate(10deg) scale(0.75);
-    opacity: .8;
+    opacity: 0.8;
   }
   40% {
     transform: translateY(-15px) translateX(-25px) rotate(10deg) scale(0.5);
@@ -489,34 +497,34 @@ ul {
   }
   80% {
     transform: translateY(-30px) translateX(20px) rotate(-20deg) scale(0.75);
-    opacity: .6;
+    opacity: 0.6;
   }
   100% {
     transform: translateY(15px) translateX(15px) rotate(0) scale(0.95);
-    opacity: .7;
+    opacity: 0.7;
   }
 }
 
 @keyframes jumping4 {
   0% {
     transform: translateY(-30px) translateX(40px) rotate(0) scale(1.2);
-    opacity: .7;
+    opacity: 0.7;
   }
   25% {
     transform: translateY(-20px) translateX(0px) rotate(50deg) scale(0.6);
-    opacity: .8;
+    opacity: 0.8;
   }
   50% {
     transform: translateY(15px) translateX(-55px) rotate(20deg) scale(0.5);
-    opacity: .9;
+    opacity: 0.9;
   }
   75% {
     transform: translateY(30px) translateX(30px) rotate(50deg) scale(0.75);
-    opacity: .7;
+    opacity: 0.7;
   }
   100% {
     transform: translateY(-15px) translateX(5px) rotate(0) scale(0.5);
-    opacity: .9;
+    opacity: 0.9;
   }
 }
 
@@ -541,7 +549,6 @@ ul {
     display: block;
   }
 }
-
 
 /* line 24, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_button.scss */
 .btn_1 {
@@ -660,7 +667,7 @@ ul {
     font-size: 13px;
     padding: 9px 24px;
   }
-  p{
+  p {
     font-size: 1.1rem;
     color: #464646;
   }
@@ -706,7 +713,6 @@ ul {
 
 /**************menu part start*****************/
 /* line 4, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_menu.scss */
-
 
 /* line 21, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_menu.scss */
 .main_menu {
@@ -784,12 +790,10 @@ ul {
 }
 
 @media (max-width: 975px) {
-   
   .signup-logo {
     display: none;
   }
 }
-
 
 @media (max-width: 991px) {
   /* line 111, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_menu.scss */
@@ -837,7 +841,7 @@ ul {
     background-color: #fff;
     text-align: center !important;
   }
-  
+
   /* line 173, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_menu.scss */
   .navbar-brand img {
     max-width: 100px;
@@ -914,7 +918,7 @@ ul {
   content: "\e68e";
   top: 7px;
   left: 0px;
-  font-family: 'themify';
+  font-family: "themify";
   color: #000000;
   font-size: 25px;
   width: 33px;
@@ -927,13 +931,12 @@ ul {
   content: "\e68e";
   top: 7px;
   left: 0px;
-  font-family: 'themify';
+  font-family: "themify";
   color: #fff;
   font-size: 25px;
   width: 33px;
   height: 33px;
 }
-
 
 /* line 306, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_menu.scss */
 .menu_fixed {
@@ -1201,7 +1204,7 @@ ul {
   display: none;
 }
 
-@media screen and (max-width: 620px){
+@media screen and (max-width: 620px) {
   #one {
     display: block;
     width: 150px;
@@ -1373,7 +1376,7 @@ ul {
 /**********************footer part css*******************/
 /* line 2, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_footer.scss */
 .footer_part {
-  background-color: #E9E2FF;
+  background-color: #e9e2ff;
   text-align: center;
   font-size: 1.2em;
 }
@@ -1382,7 +1385,7 @@ ul {
   /* line 2, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_footer.scss */
   .footer_part {
     padding: 70px 0px 25px;
-    background-color: #E9E2FF;
+    background-color: #e9e2ff;
   }
 }
 
@@ -1646,7 +1649,12 @@ h6 {
 }
 
 /* line 117, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_elements.scss */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   line-height: 1.2em;
 }
 
@@ -1671,7 +1679,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* line 9, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_contact.scss */
-.contact-info__icon i, .contact-info__icon span {
+.contact-info__icon i,
+.contact-info__icon span {
   color: #8f9195;
   font-size: 27px;
 }
@@ -1698,15 +1707,15 @@ h1, h2, h3, h4, h5, h6 {
 /*=================== contact form start ====================*/
 /* line 39, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_contact.scss */
 
-#contacthr{
+#contacthr {
   width: 70vw;
   margin-top: 20vh;
   margin-bottom: -50px;
-  background-color: #3B13B0;
+  background-color: #3b13b0;
 }
 
-@media screen and (max-width: 650px){
-  #contacthr{
+@media screen and (max-width: 650px) {
+  #contacthr {
     margin-top: 10vh;
   }
 }
@@ -1717,13 +1726,11 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 60px;
   text-align: center;
 }
-@media screen and (max-width: 650px){
-  .contact-title{
+@media screen and (max-width: 650px) {
+  .contact-title {
     margin-top: 50px;
   }
 }
-
-
 
 /* line 47, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_contact.scss */
 /* .form-contact label {
@@ -1748,7 +1755,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #000;
   display: flex;
   align-items: center;
-  box-shadow: 2px 2px 8px #E5F7FF;
+  box-shadow: 2px 2px 8px #e5f7ff;
 }
 
 @media (max-width: 991px) {
@@ -1770,14 +1777,12 @@ h1, h2, h3, h4, h5, h6 {
   background-size: 200% auto;
   -webkit-transition: 0.5s;
   transition: 0.5s;
- 
 }
 
 /* line 77, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_contact.scss */
 .form-contact .form-group .btn_1:hover {
   border: 1px solid #7c32ff;
   color: #7c32ff !important;
-  
 }
 
 /* line 80, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_contact.scss */
@@ -1794,7 +1799,7 @@ h1, h2, h3, h4, h5, h6 {
   padding-left: 18px;
   font-size: 13px;
   background: transparent;
-  box-shadow: 2px 2px 8px #E5F7FF;
+  box-shadow: 2px 2px 8px #e5f7ff;
 }
 
 .form-contact .form-control:hover {
@@ -1805,7 +1810,6 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 13px;
   background: transparent;
 }
-
 
 /* line 96, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_contact.scss */
 .form-contact .form-control:focus {
@@ -1818,8 +1822,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
   color: #999999;
 }
-
-
 
 /* line 107, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_contact.scss */
 .form-contact textarea {
@@ -1922,7 +1924,7 @@ h1, h2, h3, h4, h5, h6 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #E9E2FF;
+    background-color: #e9e2ff;
   }
 }
 
@@ -2157,7 +2159,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 100px;
   z-index: 1000;
 }
-@media screen and (max-width: 700px){
+@media screen and (max-width: 700px) {
   .searchcontainer {
     top: 60px;
   }
@@ -2267,15 +2269,15 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bolder;
 }
 
-#imagemobile{
+#imagemobile {
   display: none;
 }
 
-@media screen and (max-width: 759px){
-  #imagemobile{
+@media screen and (max-width: 759px) {
+  #imagemobile {
     display: block;
   }
-  #imagedesktop{
+  #imagedesktop {
     display: none;
   }
 }
@@ -2287,9 +2289,9 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
   color: black;
 }
-.custom-file-upload:hover{
-  border: 1px solid #FF4800;
-  transition: .2s ease-in-out;
+.custom-file-upload:hover {
+  border: 1px solid #ff4800;
+  transition: 0.2s ease-in-out;
 }
 input[type="file"] {
   display: none;
