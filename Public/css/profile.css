@@ -1,5 +1,5 @@
 body {
-  background-color: #fcfcfc;
+  background-color: #ffe9dc !important;
 }
 
 .modal1 {
@@ -227,6 +227,190 @@ footer {
 .ps-scrollbar-y-rail {
   z-index: 9999;
 }
+
+/*---------------------------------
+    Baneer section
+-----------------------------------*/
+
+
+.banner {
+  background: linear-gradient(90deg, rgb(111, 27, 236), rgb(122, 36, 214));
+  width: 100%;
+  height: 350px;
+}
+.card-bg{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  position: relative;
+  top: 20%;
+  border-radius: 30px;
+  height: 420px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;}
+.card-content{
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.name-card{
+  position: relative;
+  width: 40%;
+ height: 292px;
+ left: auto;
+ top: 55px;
+ text-align: center;
+
+
+}
+
+ 
+
+
+.user-name{
+ font-weight: bold;
+font-size: 35px;
+letter-spacing: 0.07em;
+color: #786CFF;
+margin: 5px 0px;
+}
+
+.user-text{
+  color: #5a5a5a;
+  margin: 0px 0px !important;
+  padding: 5px;
+}
+
+.edit-btn{
+  background-color: #8265FF;
+  border-radius: 10px;
+  margin-top: 15px;
+  align-items: center;
+}
+
+
+
+.list-card{
+  width: 55%;
+  position: relative;
+  height: 100%;
+  top: 28px;
+  right: 30px;
+}
+
+
+.list-items{
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.item{
+  line-height: 30px;
+  background: #F8F8F8;
+  border: 1px solid #C5C5C5;
+  box-sizing: border-box;
+  border-radius: 15px;
+  margin: 6px 20px;
+}
+
+#projects-collection .row{
+  margin-bottom: 0px;
+} 
+
+.user-details {
+  font-size: 20px;
+  line-height: 30px;
+  color: #4f4f4f;
+  position: relative;
+  top: 2px;
+}
+
+@media only screen and (max-width: 800px){
+     .card-content{
+       flex-direction: column;
+     }
+}
+ 
+
+
+/*---------------------------------
+    TAB SECTION
+-----------------------------------*/
+.tab-section{
+  background-color: #247ebf;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 10% ;
+  border-bottom: 4px inset;
+}
+.edit-btn:focus {     
+  background-color:yellow;    
+}
+
+.tab-items{
+      width: 19%;
+      height: 59px;
+      text-align: center;
+      border-bottom: 4px solid;
+}
+
+ 
+.tab-section .tab-items button{
+  font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: 0.05em;
+
+color: #ffffff;
+}
+
+
+
+
+
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
 
 
 /*---------------------------------
@@ -785,10 +969,6 @@ ul.side-nav.leftside-navigation li a {
 
 ul.side-nav.leftside-navigation ul.collapsible-accordion {
   background-color: #FFF;
-}
-
-ul.side-nav.leftside-navigation:hover {
-  /*overflow-y:hidden;*/
 }
 
 ul.side-nav.leftside-navigation li.user-details {
