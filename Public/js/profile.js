@@ -421,19 +421,40 @@ function myfunction() {
 /************************* TAB SECTION JS *****************************/
 
 
-function openCity(evt, cityName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
+const selectTab = element => {
+  
+
+  const active = document.querySelector('.active-2');
+
+  const visible = document.querySelector('.content-visible');
+  
+ 
+  const tabContent = document.getElementById(element.href.split('#')[1]);
+
+  if (active) {
+    active.classList.remove('active-2');
   }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  
+  
+  element.classList.add('active-2');
+  
+  
+  if (visible) {
+    visible.classList.remove('content-visible');
   }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
+  
+
+  tabContent.classList.add('content-visible');
+  
 }
 
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
+
+document.addEventListener('click', event => {
+  
+  
+  if (event.target.matches('.tab-item a')) {
+  
+    selectTab(event.target);
+    
+  }
+}, false);
